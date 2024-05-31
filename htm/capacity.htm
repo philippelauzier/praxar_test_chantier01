@@ -1,0 +1,352 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+   <div data-exercise-id="64421824-6C38-47E2-97A4-8CE036F214D4"></div>
+
+   <div class="exercise-reference">
+      <h1>Chapitre 7</h1>
+      <h2>La capacité de production</h2>
+      <h3>p. 222.</h3>
+      <img src="/kayak/images/tutorials/book.jpg"/>             
+   </div>  
+   <div class="exercise-reference-teluq">
+      <h1>Chapitre 12</h1>
+      <h2>La gestion des opérations</h2>
+      <h3>pp. 398-402.</h3>
+      <img src="/kayak/images/tutorials/book-teluq.jpg"/>   
+   </div> 
+   
+   <div id="character-image"><img class="img-circle" src="/kayak/images/operation-small.png"/></div>
+   <div id="page-1" data-element="page" data-order="1">
+      <h1>Objectif de production</h1>
+      <h2>La fabrication</h2>
+      <div id="text"> 
+         <p>La plupart des kayaks modernes sont fabriqués selon un processus de rotomoulage. Un opérateur verse du polyéthylène en poudre dans un moule qui est par la suite chauffé à haute température dans un four. Le moule est alors mis en rotation biaxiale afin que le plastique devenu liquide se répartisse uniformément sur les parois. </p> 
+         <p>Après une période de refroidissement, les pièces sont démoulées et le kayak est assemblé. </p>
+      </div>
+      <div id="content"> 
+        <center><img class="no-border" src="/kayak/images/tutorials/capacity/page1.png"/></center>
+      </div>
+   </div>
+
+   <div id="page-2" data-element="page" data-order="2"> 
+      <h1>Objectif de production</h1>
+      <h2>Les fours </h2>
+      <div id="text"> 
+         <p>Le four est l'équipement central dans la fabrication des kayaks. Il détermine l'organisation du travail et le rythme de production. Une usine compte généralement plusieurs fours disposés en parallèle. Les produits finis sont assemblés en fin de parcours et remisés dans un entrepôt.</p>
+         <p>C'est le nombre de fours qui détermine la quantité de kayaks qu'une usine peut produire au cours d'une année. Pour augmenter la capacité de production, il faut acheter de nouveaux fours.</p>
+      </div>
+      <div id="content">
+        <center><div class="tuto-graph-container" id="graph-container"></div></center>
+      </div>   
+      <script type="text/javascript" language="Javascript">
+        $.extend($.praxar, {
+      	  page2: function() {
+      		  $('#graph-container').highcharts({
+      			chart: {type: 'areaspline'},
+      	        title: {text: ''},
+      	        xAxis: {
+      	      	    title: { text: 'Nombre de fours' },
+      	      	    labels: { enabled: true },
+      	            categories: [
+      	                '-','','+'
+      	            ]
+      	        },
+      	        yAxis: {
+      	            title: { text: 'Capacité de production' },
+     	             labels: { 
+         	           	enabled: true,
+                  	    formatter: function() {
+                            if (this.value == 20) return '-';
+                            else if (this.value == 60) return '+';
+                            else return '';
+                         } 
+         	         }
+      	        },
+      	        series: [{
+      	      	  data: [20, 40, 60]
+      	        }]
+      	    });
+      	  }
+        });
+      </script>
+   </div>
+   
+   <div id="page-3" data-element="page" data-order="3">
+      <h1>Objectif de production</h1>
+      <h2>Capacité théorique vs. capacité réelle</h2>
+      <div id="text">
+         <p>La capacité théorique de production d'une usine est la quantité de kayaks qu'elle peut produire au cours d'une période de temps donnée lorsque les conditions sont optimales. </p>
+         <p>La capacité réelle de production est toujours inférieure à la capacité théorique car plusieurs facteurs réduisent le temps de production. Pensez par exemple aux arrêts de travail, aux entretiens d'équipements, à leurs bris, etc.</p>
+      </div>
+      <div id="content">
+        <center><div class="tuto-graph-container" id="graph-container"></div></center>
+      </div>   
+      <script type="text/javascript" language="Javascript">
+        $.extend($.praxar, {
+      	  page3: function() {
+      		  $('#graph-container').highcharts({
+      			  chart: {type: 'area'},
+     	         title: {text: ''},
+     	         xAxis: {
+     	      	    title: { text: '' },
+     	            categories: ['','','','','']
+     	         },
+     	         yAxis: {
+     	            title: { text: '' },
+                   max: 100,
+     	            labels: { 
+     	               enabled: true,
+     	               formatter: function() {
+     	                  return this.value + '%';
+     	               }
+                   }
+     	         },
+                legend: {
+                  enabled: true,
+                  style: {
+                     fontFamily: 'Roboto',
+                 	  fontWeight: '300',
+                 	  color: '#313946',
+                 	  fontSize: '18px'
+              	   }
+                },
+     	         series: [{
+                   name: 'capacité théorique', 
+                   data: [100, 100, 100, 100, 100]
+     	         },{
+                   name: 'capacité réelle',
+                   data: [80, 91, 85, 89, 93]
+     	         }]  
+      	    });
+      	  }
+        });
+      </script>
+   </div>  
+
+   <div id="page-4" data-element="page" data-order="4">
+      <h1>Objectif de production</h1>
+      <h2>Le temps de travail</h2>
+      <div id="text">
+         <p>La capacité théorique d'un four est évidemment liée au temps où il est en activité. Dans l'industrie du kayak, la pratique consiste à opérer les équipements durant les heures normales de travail, soit 40 heures par semaine pendant 48 semaines. La capacité théorique de chaque four est donc de 1 920 heures par année.</p>
+         <p>En pratique, il faut déduire au moins une centaine d'heures d'arrêt pour divers motifs de sorte que l'utilisation réelle d'un four dépasse rarement 95% de la capacité théorique. Sous certaines conditions, la capacité réelle peut même être aussi basse que 80% de la capacité théorique.</p>
+      </div>
+      <div id="content"> 
+        <center><img class="no-border" src="/kayak/images/tutorials/capacity/page4_fr.png"/></center>
+      </div>
+   </div>  
+
+   <div id="page-5" data-element="page" data-order="5">
+      <h1>Objectif de production</h1>
+      <h2>La planification de la production</h2>
+      <div id="text">
+         <p>Au moment d'établir le budget prévisionnel de l'entreprise, il faut préciser le taux d'utilisation de la capacité de l'usine au cours de la prochaine année. Lorsque le taux est inférieur à la capacité réelle, par exemple moins de 70%, des arrêts de production sont prévus et les équipements sont sous-utilisés.</p>
+         <p>Lorsque le taux d'utilisation de la capacité est supérieur à la capacité réelle, par exemple plus de 95%, une partie du travail sera effectué en temps supplémentaire. Les employés qui travaillent en temps supplémentaire sont rémunérés à un taux supérieur de 50% au taux régulier. </p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/capacity/page5_fr.png"/></center>             
+      </div>   
+   </div>  
+   
+   <div id="page-6" data-element="page" data-order="6">
+      <h1>Objectif de production</h1>
+      <h2>L'offre</h2>
+      <div id="text">
+         <p>L'offre d'une entreprise est la quantité de kayaks qu'elle met en vente au cours d'une période donnée. Dans la simulation, l'offre est constituée de la production réalisée en cours d'année à laquelle s'ajoutent les kayaks en stock au début de l'année. Les stocks de début d'année sont des kayaks fabriqués au cours des années précédentes et qui sont entreposés en attendant de trouver preneur. </p>
+         <p>À la fin de l'année, les kayaks offerts et qui n'ont pas été vendus constituent le stock de produits finis. Cette information est publiée dans divers rapports de gestion.</p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/capacity/page6.png"/></center>             
+      </div>   
+   </div>  
+   
+   <div id="page-7" data-element="page" data-order="7">
+      <h1>Objectif de production</h1>
+      <h2>La demande</h2>
+      <div id="text">
+         <p>La demande de kayaks influence directement le plan de production. Lorsque la demande est forte et qu'il y a peu de produits en stock, il faut augmenter l'objectif de production afin que l'offre rencontre la demande. Lorsque la demande est faible et que les stocks sont élevés, il faut réduire l'objectif de production. </p>
+         <p>En tant que directeur général de l'entreprise, vous devez vous assurer que le plan de production prenne en compte les besoins du marché. </p>
+      </div>
+      <div id="content">
+        <center><div class="tuto-graph-container" id="graph-container"></div></center>
+      </div>   
+      <script type="text/javascript" language="Javascript">
+        $.extend($.praxar, {
+      	  page7: function() {
+      		  $('#graph-container').highcharts({
+      			chart: {type: 'areaspline'},
+      	        title: {text: ''},
+      	        xAxis: {
+      	      	    title: { text: 'Demande' },
+      	      	    labels: { enabled: true },
+      	            categories: [
+      	                '-','','+'
+      	            ]
+      	        },
+      	        yAxis: {
+      	            title: { text: 'Objectif de production' },
+     	             labels: { 
+         	           	enabled: true,
+                  	    formatter: function() {
+                            if (this.value == 20) return '-';
+                            else if (this.value == 60) return '+';
+                            else return '';
+                         } 
+         	         }
+      	        },
+      	        series: [{
+      	      	  data: [20, 40, 60]
+      	        }]
+      	    });
+      	  }
+        });
+      </script>
+   </div>    
+
+   <div id="page-8" data-element="page" data-order="8">
+      <h1>Objectif de production</h1>
+      <h2>La décision</h2>
+      <div id="text">
+         <p>La simulation vous amène à déterminer quel pourcentage de la capacité théorique de l'usine vous comptez utiliser au cours de la prochaine année. Ce pourcentage peut varier entre 60% et 100%. Ce pourcentage est transformé en nombre d'unités dans le formulaire.</p>
+         <p>Votre plan de production permet de calculer les coûts de fabrication et d'établir le budget prévisionnel de la prochaine année. Tous ces calculs sont réalisés automatiquement par le logiciel. </p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/capacity/page8_fr.png"/></center>             
+      </div>   
+   </div>    
+
+   <div id="page-9" data-element="page" data-order="9">
+      <h1>Objectif de production</h1>
+      <h2>Facteurs à considérer</h2>
+      <div id="text">
+         <p>La capacité réelle de votre usine est influencée par vos décisions de production (budget de maintenance, par exemple) mais également par vos décisions au niveau des ressources humaines. Des employés qualifiés et bien rémunérés améliorent la productivité de l'usine.</p>
+         <p>Prévoyez également une baisse de productivité lorsque vous achetez des fours neufs. Ces équipements exigent un temps de rodage lors de leur première année d'utilisation. </p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/capacity/page9_fr.png"/></center>             
+      </div>   
+   </div>    
+
+   <div id="page-10" data-element="page" data-order="10">
+      <h1>Objectif de production</h1>
+      <h2>Sommaire</h2>
+      <div id="text">
+         <p>Planifier la production de la prochaine année constitue une décision complexe. Il faut d'abord prendre en compte la capacité théorique de votre usine (100%) qui ne peut être dépassée sans acheter de nouveaux fours. Il faut ensuite comprendre que la capacité réelle de votre usine se situe entre 80 % et 95% de la capacité théorique. Pour produire à 100%, il faut nécessairement compenser la différence par du temps supplémentaire. </p>
+         <p>Enfin, votre décision doit tenir compte du marché. Il est inutile de produire des kayaks qui seront invendus. </p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/capacity/page10.png"/></center>             
+      </div>   
+   </div>    
+
+   <div id="page-11" data-element="page" data-order="11">
+      <h1>Objectif de production</h1>
+      <h2>Questions et réponses</h2>
+      <div id="text"> 
+         <p>Révisons maintenant quelques concepts clés du tutoriel.</br></br>Pour chaque question à choix multiple, cliquez sur la réponse qui vous semble la meilleure. Si ce choix s’avère erroné, poursuivez jusqu'à ce que vous obteniez la bonne réponse.</p>
+      </div>
+      <div id="content" data-class-override="q-and-a-override">
+        <center> 
+           <div class="bg-blanc-10-no-gradient q-and-a-div">
+           <h4>Bonne réponse obtenue au...</h4>
+            <p class="q-and-a">
+              1<sup>er</sup> essai &nbsp:&nbsp 5 points<br/>
+              2<sup>e&nbsp</sup> essai &nbsp:&nbsp 4 points<br/>
+              3<sup>e&nbsp</sup> essai &nbsp:&nbsp 3 points<br/>
+              4<sup>e&nbsp</sup> essai &nbsp:&nbsp 2 points<br/>
+              5<sup>e&nbsp</sup> essai &nbsp:&nbsp 1 point&nbsp&nbsp<br/>
+            </p>
+           </div>
+        </center>
+      </div>   </div>
+  
+   <div id="page-12" data-element="question" data-order="12">
+      <div id="question-number">1</div>
+      <div id="question"> 
+         Lequel des éléments suivants contribue à déterminer la capacité théorique de production d'une usine de kayaks?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Le nombre de fours dans l'usine</div>
+         <div class="choice" data-value="2">Le budget de maintenance des fours</div>
+         <div class="choice" data-value="3">Le niveau de qualification de la main-d'oeuvre</div>
+         <div class="choice" data-value="4">Le nombre de jours d'opération dans l'année</div>
+         <div class="choice" data-value="5">Toutes les réponses précédentes</div>               
+      </div>
+	 <div id="goodAnswer"> 
+	     Dans la simulation, la capacité théorique est déterminée par un seul facteur : le nombre de fours. La seule façon d'augmenter la capacité théorique est donc d'acheter des fours additionnels. 
+	 </div>
+   </div>  
+   
+   <div id="page-13" data-element="question" data-order="13">
+      <div id="question-number">2</div>
+      <div id="question"> 
+         Lequel des éléments suivants contribue à déterminer la capacité réelle de production d'une usine de kayaks?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Le nombre de fours dans l'usine</div>
+         <div class="choice" data-value="2">Le budget de maintenance des fours</div>
+         <div class="choice" data-value="3">Le niveau de qualification de la main-d'oeuvre</div>
+         <div class="choice" data-value="4">Le nombre de jours d'opération dans l'année</div>
+         <div class="choice" data-value="5">Toutes les réponses précédentes</div>               
+      </div>
+	 <div id="goodAnswer"> 
+	     Un grand nombre de facteurs influencent la productivité d'une usine. Tous les facteurs énumérés en font partie. 
+	 </div>
+   </div>  
+   
+  <div id="page-14" data-element="question" data-order="14">
+      <div id="question-number">3</div>
+      <div id="question"> 
+         La capacité réelle d'une usine de kayaks est...
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">...supérieure à la capacité théorique</div>
+         <div class="choice" data-value="2">...égale à la capacité théorique</div>
+         <div class="choice" data-value="3">...inférieure à la capacité théorique</div>
+         <div class="choice" data-value="4">...un multiple de la capacité théorique</div>
+         <div class="choice" data-value="5">...sans lien avec la capacité théorique</div>                  
+      </div>
+	 <div id="goodAnswer"> 
+	     La capacité réelle est inférieure à la capacité théorique car plusieurs facteurs réduisent le temps de production : arrêts de production, maintenance, etc. 
+	 </div>
+   </div>
+   
+   <div id="page-15" data-element="question" data-order="15">
+      <div id="question-number">4</div>      
+      <div id="question"> 
+        Comment est constituée l'offre d'un fabricant de kayaks?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">C'est le nombre total de kayaks produits au cours d'une année </div>
+         <div class="choice" data-value="2">C'est le nombre total de kayaks en stock au début de l'année</div>
+         <div class="choice" data-value="3">C'est le total de la production de l'année et du stock de kayaks en début d'année</div>
+         <div class="choice" data-value="4">C'est le stock de kayaks en entrepôt à la fin de l'année</div>
+         <div class="choice" data-value="5">Ce sont les ventes réelles de kayaks réalisées au cours de l'année</div>                  
+      </div>
+	 <div id="goodAnswer"> 
+	     L'offre d'une entreprise est composée de deux éléments : la production réelle de l'année à laquelle s'ajoute le nombre de kayaks en stock au début de l'année. 
+	 </div>
+   </div>
+
+   <div id="page-16" data-element="question" data-order="16">
+      <div id="question-number">5</div>      
+      <div id="question"> 
+        Si la demande prévue pour la prochaine année est supérieure à la capacité théorique de votre usine, de quelle façon pouvez-vous satisfaire cette demande?
+      </div>   
+      <div id="choices" class="largeChoices">
+	     <div class="choice" data-value="1">Augmenter le budget de maintenance des fours</div>
+         <div class="choice" data-value="2">Améliorer la formation des employés d'usine </div>
+         <div class="choice" data-value="3">Améliorer la qualité du polyéthylène utilisé par l'usine</div>
+         <div class="choice" data-value="4">Planifier le recours au temps supplémentaire</div>
+         <div class="choice" data-value="5">Acheter de nouveaux fours de rotomoulage</div>                  
+      </div>
+	 <div id="goodAnswer"> 
+	     Dans la simulation, vous ne pouvez dépasser la capacité théorique de production de l'usine sans acheter de nouveaux fours.  
+	 </div>
+   </div>
+      
+   </body>
+</html>

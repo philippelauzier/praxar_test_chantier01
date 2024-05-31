@@ -1,0 +1,442 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+   <div data-exercise-id="a95aeb45-d337-46b8-907a-db1deb64d838"></div>
+   <div class="exercise-reference">
+      <h1>Chapitre 5</h1>
+      <h2>Le positionnement</h2>
+      <h3>pp. 159-160.</h3>
+      <img src="/kayak/images/tutorials/book.jpg"/>             
+   </div>  
+    <div class="exercise-reference-teluq">
+      <h1>Chapitre 3</h1>
+      <h2>La planification</h2>
+      <h3>pp. 101-107.</h3>
+      <img src="/kayak/images/tutorials/book-teluq.jpg"/>   
+   </div> 
+   
+   <div id="character-image"><img class="img-circle" src="/kayak/images/marketing-small.png"/></div>
+   <div id="page-1" data-element="page" data-order="1">
+      <h1>Différenciation du produit</h1>
+      <h2>Développer une offre unique</h2>
+      <div id="text"> 
+         <p>Les fabricants de kayaks innovent constamment afin d'offrir des produits différents de ceux de la concurrence. Les clients peuvent donc choisir entre plusieurs kayaks de qualité variable à des prix qui conviennent à toutes les bourses.</p> 
+         <p>Un manufacturier prend de multiples décisions lorsqu'il souhaite créer un produit différencié : choix du design, de la longueur, de la qualité du plastique, de l'emballage et de la garantie. Il peut aussi ajouter un gouvernail et des décalques.</p>
+      </div>
+      <div id="content"> 
+        <center><img class="no-border" src="/kayak/images/tutorials/positionning/page1.png"/></center>
+      </div>
+   </div>
+
+   <div id="page-2" data-element="page" data-order="2"> 
+      <h1>Différenciation du produit</h1>
+      <h2>Design</h2>
+      <div id="text"> 
+         <p>Le design d'un kayak doit prendre en compte la sécurité de l'embarcation mais aussi son apparence. Le design est une discipline à la jonction du marketing, de la technique et de l'art.</p>
+         <p>Un effort significatif en design parviendra à créer un kayak unique qui attirera l'attention des consommateurs. Le coût d'un design original peut s'avérer élevé.</p>
+      </div>
+      <div id="content"> 
+        <center><div class="tuto-graph-container" id="graph-container"></div></center>
+      </div>
+      <script type="text/javascript" language="Javascript">
+        $.extend($.praxar, {
+      	  page2: function() {
+      		  $('#graph-container').highcharts({
+      	        chart: {type: 'areaspline'},
+      	        title: {text: ''},
+      	        xAxis: {
+      	      	    title: { 
+      	      	       text: 'Gamme du produit',
+      	      	       offset: 60
+      	      	    },
+      	            categories: [
+      	                'Bas de gamme',
+      	                'Moyen de gamme',
+      	                'Haut de gamme'
+      	            ],
+                     labels: {
+                        style: {
+                            fontSize: '16px'
+                        }}
+      	        },
+      	        yAxis: {
+      	            title: { text: 'Coût du design' },
+      	            labels: { 
+      	               enabled: true,
+      	               formatter: function() {
+      	                  if (this.value == 20) return '-';
+      	                  else if (this.value == 60) return '+';
+      	                  else return '';
+      	               }
+                    }
+      	        },
+      	        series: [{
+      	      	  data: [20, 40, 60]
+      	        }]
+      	    });
+      	  }
+        });
+      </script>
+   </div>   
+   
+   <div id="page-3" data-element="page" data-order="3">
+      <h1>Différenciation du produit</h1>
+      <h2>Longueur</h2>
+      <div id="text">
+         <p>La longueur est probablement l'élément le plus distinctif d'un kayak. Les consommateurs ont tendance à l'associer au prix.</p>
+         <p>Toutes choses étant égales, un kayak plus long coûtera plus cher à fabriquer car il nécessite une plus grande quantité de polyéthylène.</p>
+      </div>
+      <div id="content">
+          <center><div class="tuto-graph-container" id="graph-container"></div></center>    
+      </div>   
+      <script type="text/javascript" language="Javascript">
+      $.extend($.praxar, {
+    	  page3: function() {
+    		  $('#graph-container').highcharts({
+    	        chart: {type: 'areaspline'},
+    	        title: {text: ''},
+    	        xAxis: {
+    	      	    title: { text: 'Longueur du kayak' },    	      	    
+    	            categories: [
+    	                '6 pieds',
+    	                '10 pieds',
+    	                '20 pieds'
+    	            ]
+    	        },
+    	        yAxis: {
+    	            title: { text: 'Coût de fabication' },
+    	            labels: { 
+    	            	enabled: true,
+             	        formatter: function() {
+                           if (this.value == 20) return '-';
+                           else if (this.value == 60) return '+';
+                           else return '';
+                        } 
+    	            }
+    	        },
+    	        series: [{
+    	      	  data: [20, 40, 60]
+    	        }]
+    	    });
+    	  }
+      });
+      </script>      
+   </div>  
+
+   <div id="page-4" data-element="page" data-order="4">
+      <h1>Différenciation du produit</h1>
+      <h2>Polyéthylène</h2>
+      <div id="text">
+         <p>La plupart des kayaks modernes sont fabriqués à base de polyéthylène selon un processus de rotomoulage. Le prix du polyéthylène varie en fonction de sa densité qui est elle-même associée à sa résistance.</p>
+         <p>Le polyéthylène possède de nombreuses qualités qui le rendent idéal pour la fabrication de kayaks : grande disponibilité, faible prix, résistance aux chocs et à l'abrasion, large choix de couleurs, facile à recycler, etc.</p>
+      </div>
+      <div id="content">
+          <center><div class="tuto-graph-container" id="graph-container"></div></center>    
+      </div>   
+      <script type="text/javascript" language="Javascript">
+      $.extend($.praxar, {
+    	  page4: function() {
+    		  $('#graph-container').highcharts({
+    	        chart: {type: 'areaspline'},
+    	        title: {text: ''},
+    	        xAxis: {
+    	      	    title: { 
+    	      	   	   text: 'Qualité du polyéthylène',
+    	      	   	   offset: 60 	   
+    	      	   	},
+    	            categories: [
+    	                'Faible densité / Résistance normale',
+    	                'Haute densité / Résistance supérieure'
+    	            ],
+  	              labels: {
+  	                style: {
+  	                    fontSize: '16px'
+  	                }}
+    	        },
+    	        yAxis: {
+    	            title: { text: 'Prix du polyéthylène' },
+    	            labels: { 
+    	            	enabled: true,
+             	        formatter: function() {
+                           if (this.value == 10) return '-';
+                           else if (this.value == 20) return '+';
+                           else return '';
+                        } 
+    	            }
+    	        },
+    	        series: [{
+    	      	  data: [10, 20]
+    	        }]
+    	    });
+    	  }
+      });
+      </script>  
+   </div>  
+
+   <div id="page-5" data-element="page" data-order="5">
+      <h1>Différenciation du produit</h1>
+      <h2>Gouvernail</h2>
+      <div id="text">
+         <p>Un gouvernail n'est pas essentiel à la pratique du kayak. Les kayakistes sérieux considèrent cependant qu'il s'agit d'un équipement très utile en eau agitée.</p>
+         <p>Le gouvernail est fixé à l'arrière de l'embarcation. Il est relié à un pédalier situé dans le cockpit. La présence d'un gouvernail doit être prévue lors de la conception de l'embarcation.</p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/positionning/page5.png"/></center>             
+      </div>   
+   </div>  
+
+   <div id="page-6" data-element="page" data-order="6">
+      <h1>Différenciation du produit</h1>
+      <h2>Décalques</h2>
+      <div id="text">
+         <p>Les décalques sont ajoutés aux kayaks pour des raisons purement décoratives. Ils ne coûtent pas cher et donnent un aspect unique à l'embarcation.</p>
+         <p>Un décalque est un film plastique sur lequel est ajouté un dessin d'un côté et un adhésif de l'autre. Les décalques utilisés pour décorer les kayaks résistent à l'eau.</p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/positionning/page6.png"/></center>             
+      </div>   
+   </div>  
+   
+   <div id="page-7" data-element="page" data-order="7">
+      <h1>Différenciation du produit</h1>
+      <h2>Emballage</h2>
+      <div id="text">
+         <p>Les risques liés au transport des marchandises vers les magasins sont nombreux : surface endommagée, vol ou bris d'équipement, déformation de la coque, etc. Les détaillants n'hésitent pas à retourner les kayaks défectueux.</p>
+         <p>Au minimum, il faut protéger les kayaks par un film plastique. Il est également possible d'utiliser une toile ou un cadre en bois qui offrent une meilleure protection.</p>
+      </div>
+      <div id="content">
+          <center><div class="tuto-graph-container" id="graph-container"></div></center>    
+      </div>   
+      <script type="text/javascript" language="Javascript">
+      $.extend($.praxar, {
+    	  page7: function() {
+    		  $('#graph-container').highcharts({
+    	        chart: {type: 'areaspline'},
+    	        title: {text: ''},
+    	        xAxis: {
+    	      	    title: { text: 'Qualité de l\'emballage' },
+    	            categories: [
+    	                'Film plastique',
+    	                'Sac de toile',
+    	                'Support'
+    	            ],
+                  labels: {
+                     style: {
+                         fontSize: '16px'
+                     }}
+    	        },
+    	        yAxis: {
+    	            title: { text: 'Nombre de retours' },
+    	            labels: { 
+    	            	enabled: true,
+             	        formatter: function() {
+                           if (this.value == 20) return '-';
+                           else if (this.value == 40) return '+';
+                           else return '';
+                        } 
+    	            }
+    	        },
+    	        series: [{
+    	      	  data: [40, 30, 20]
+    	        }]
+    	    });
+    	  }
+      });
+      </script>    
+   </div>  
+   
+   <div id="page-8" data-element="page" data-order="8">
+      <h1>Différenciation du produit</h1>
+      <h2>Garantie</h2>
+      <div id="text">
+         <p>La garantie offre au client l'assurance qu'il aura la pleine jouissance de son bien pour une période de temps déterminée. La garantie fait partie intégrale du produit. </p>
+         <p>Pour un fabricant, la garantie comporte un risque puisqu'il faudra remplacer les kayaks défectueux. Il est tout à fait possible de diminuer les retours de marchandises par un meilleur contrôle de la qualité en usine.</p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/positionning/page8.png"/></center>             
+      </div>   
+   </div>    
+   
+   <div id="page-9" data-element="page" data-order="9">
+      <h1>Différenciation du produit</h1>
+      <h2>Avantage concurrentiel</h2>
+      <div id="text">
+         <p>Lorsqu'un fabricant crée un nouveau kayak, il connaît les produits déjà offerts par les autres manufacturiers. </p>
+         <p>Il a tout intérêt à offrir un produit unique qui n'entre pas directement en concurrence avec un produit déjà établi. Ce kayak distinctif offre un <i>avantage concurrentiel</i> et permet d'obtenir un meilleur prix sur le marché.</p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/positionning/page9.png"/></center>             
+      </div>  
+       
+   </div>    
+   
+   <div id="page-10" data-element="page" data-order="10">
+      <h1>Différenciation du produit</h1>
+      <h2>Indicateur</h2>
+      <div id="text">
+         <p>La simulation propose un indicateur pour comparer vos produits à ceux des concurrents.</p>
+         <p>Selon les caractéristiques que vous aurez sélectionnées, un kayak sera classé sur une échelle de 1 à 5, de la qualité perçue la plus basse à la qualité perçue la plus élevée.</p>
+         <p>Plusieurs autres facteurs peuvent influencer la qualité du kayak, tel que la qualité de la main-d'oeuvre, le choix des fournisseurs, etc.</p>
+      </div>
+      <div id="content">
+          <center><div class="tuto-graph-container" id="graph-container"></div></center>    
+      </div>   
+      <script type="text/javascript" language="Javascript">
+      $.extend($.praxar, {
+    	  page10: function() {
+    		  $('#graph-container').highcharts({
+    	        chart: {type: 'areaspline'},
+    	        title: {text: ''},
+    	        xAxis: {
+    	      	    title: { 
+    	      	   	   text: 'Qualité du kayak',
+    	      	   	   offset: 60
+    	      	   	},
+    	            categories: [
+    	                'Bas de gamme',
+    	                'Milieu de gamme',
+    	                'Haut de gamme'
+    	            ],
+                  labels: {
+                     style: {
+                         fontSize: '16px'
+                     }}
+    	        },
+    	        yAxis: {
+    	            title: { text: 'Indicateur' },
+    	            labels: { enabled: true },
+    	            max: 5
+    	        },
+    	        series: [{
+    	      	  data: [1, 3, 5]
+    	        }]
+    	    });
+    	  }
+      });
+      </script>    
+   </div>    
+
+   <div id="page-11" data-element="page" data-order="11">
+      <h1>Différenciation du produit</h1>
+      <h2>Positionnement</h2>
+      <div id="text">
+         <p>La figure présente un segment de marché dans lequel quatre entreprises offrent des kayaks : les produits A, B, C et D.</p>
+         <p>Parce qu'elles se sont bien positionnées dans la gamme, les entreprises A et D ne se font pas directement concurrence. À l'opposé, les entreprises  B et C visent le même groupe de clients et se partagent donc ce marché.</p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/positionning/page11.png"/></center>             
+      </div>   
+   </div>    
+
+   <div id="page-12" data-element="page" data-order="12">
+      <h1>Différenciation du produit</h1>
+      <h2>Questions et réponses</h2>
+      <div id="text"> 
+         <p>Révisons maintenant quelques concepts clés du tutoriel.</br></br>Pour chaque question à choix multiple, cliquez sur la réponse qui vous semble la meilleure. Si ce choix s’avère erroné, poursuivez jusqu'à ce que vous obteniez la bonne réponse.</p>
+      </div>
+      <div id="content" data-class-override="q-and-a-override">
+        <center> 
+           <div class="bg-blanc-10-no-gradient q-and-a-div">
+           <h4>Bonne réponse obtenue au...</h4>
+            <p class="q-and-a">
+              1<sup>er</sup> essai &nbsp:&nbsp 5 points<br/>
+              2<sup>e&nbsp</sup> essai &nbsp:&nbsp 4 points<br/>
+              3<sup>e&nbsp</sup> essai &nbsp:&nbsp 3 points<br/>
+              4<sup>e&nbsp</sup> essai &nbsp:&nbsp 2 points<br/>
+              5<sup>e&nbsp</sup> essai &nbsp:&nbsp 1 point&nbsp&nbsp<br/>
+            </p>
+           </div>
+        </center>
+      </div>
+   </div>
+  
+   <div id="page-13" data-element="question" data-order="13">
+      <div id="question-number">1</div>
+      <div id="question"> 
+         Pourquoi votre entreprise devrait-elle créer des produits différenciés?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Cela coûte moins cher à produire</div>
+         <div class="choice" data-value="2">Ces produits sont très populaires sur les marchés d'exportation</div>
+         <div class="choice" data-value="3">Cela rend tout le personnel fier de travailler pour une entreprise innovante</div>
+         <div class="choice" data-value="4">Cela permet d'offrir un produit unique sur le marché</div>
+         <div class="choice" data-value="5">Cela permet d'obtenir un prix plus élevé que la concurrence</div>                  
+      </div>
+	 <div id="goodAnswer"> 
+	     Un produit différencié permet d'offrir une proposition de valeur qui est différente de celle des concurrents et de se distinguer dans un marché.
+	 </div>
+   </div>  
+   
+   <div id="page-14" data-element="question" data-order="14">
+      <div id="question-number">2</div>
+      <div id="question"> 
+         Laquelle des affirmations suivantes est fausse?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">La garantie fait partie intégrale du produit</div>
+         <div class="choice" data-value="2">La longueur du kayak influence son prix</div>
+         <div class="choice" data-value="3">Plus la qualité d'un kayak est élevée, plus sa rentabilité est assurée.  </div>
+         <div class="choice" data-value="4">Il existe plusieurs types d'emballages pour transporter les kayaks</div>
+         <div class="choice" data-value="5">Le design permet de donner une apparence distinctive à un kayak</div>                  
+      </div>
+      <div id="goodAnswer"> 
+         La rentabilité n'est pas directement reliée à la qualité des produits. Il est possible de commercialiser de façon rentable des kayaks à tous les niveaux de la gamme. 
+      </div>
+   </div>  
+   
+   <div id="page-15" data-element="question" data-order="15">
+      <div id="question-number">3</div>      
+      <div id="question"> 
+        Parmi les affirmations suivantes, laquelle ne s'applique pas à la qualité perçue par la clientèle?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">La pose de décalques</div>
+         <div class="choice" data-value="2">La durée de la garantie</div>
+         <div class="choice" data-value="3">Le choix des fournisseurs</div>
+         <div class="choice" data-value="4">La densité du polyéthylène</div>
+         <div class="choice" data-value="5">Tous les choix précédents ont un impact sur la perception de la qualité d’un kayak.</div>                  
+      </div>
+      <div id="goodAnswer"> 
+         Les caractéristiques d’un produit ont un impact important sur la perception de la qualité. Il ne faut toutefois pas sous-estimer d’autres aspects qui se situent plus en amont dans le processus de fabrication, tels que la qualité des fournisseurs et la qualité de la main-d'oeuvre. 
+      </div>
+   </div> 
+   
+   <div id="page-16" data-element="question" data-order="16">
+      <div id="question-number">4</div>      
+      <div id="question"> 
+        Lorsqu'un fabricant choisit les caractéristiques les moins coûteuses pour créer un kayak, quel positionnement adopte-t-il?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Entrée de gamme</div>
+         <div class="choice" data-value="2">Milieu de gamme</div>
+         <div class="choice" data-value="3">Haut de gamme</div>
+         <div class="choice" data-value="4">Produit d'appel</div>
+         <div class="choice" data-value="5">Produit dominant</div>                  
+      </div>
+      <div id="goodAnswer"> 
+         Les produits d'entrée de gamme ne coûtent pas cher à fabriquer. Cela permet de les offrir à bon prix.
+      </div>
+   </div>
+   
+   <div id="page-17" data-element="question" data-order="17">
+      <div id="question-number">5</div>      
+      <div id="question"> 
+        La différenciation du produit, c'est...
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Créer des produits semblables à ceux des concurrents</div>
+         <div class="choice" data-value="2">Créer des produits différents de ceux des concurrents</div>
+         <div class="choice" data-value="3">Créer des produits qui intéressent toutes les catégories de clients</div>
+         <div class="choice" data-value="4">Créer des produits qui soient faciles à fabriquer en usine</div>
+         <div class="choice" data-value="5">Créer des produits haut de gamme</div>                  
+      </div>
+      <div id="goodAnswer"> 
+         Différencier un produit, c'est créer une proposition de valeur unique dans un segment de marché.
+      </div>
+   </div> 
+   
+   </body>
+</html>

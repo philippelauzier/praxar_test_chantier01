@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+   <div data-exercise-id="BCA07EE7-16DA-4283-95BB-2332A85205FA"></div>
+   
+   <div class="exercise-reference">
+      <h1>Chapitre 9</h1>
+      <h2>Le choix des moyens de formation</h2>
+      <h3>pp. 303-305.</h3>
+      <img src="/kayak/images/tutorials/book.jpg"/>             
+   </div> 
+   <div class="exercise-reference-teluq">
+      <h1>Chapitre 6</h1>
+      <h2>La gestion des ressources humaines</h2>
+      <h3>pp. 221-223.</h3>
+      <img src="/kayak/images/tutorials/book-teluq.jpg"/>   
+   </div> 
+
+   <div id="character-image"><img class="img-circle" src="/kayak/images/rh-small.png"/></div>
+
+   <div id="page-1" data-element="page" data-order="1">
+      <h1>Formation</h1>
+      <h2>Définition</h2>
+      <div id="text"> 
+         <p>L'industrie du kayak a connu une évolution rapide au cours des dernières années. Les techniques de production s'améliorent constamment et les fabricants rivalisent entre eux pour lancer des produits toujours plus novateurs.</p> 
+         <p>La formation en entreprise vise à ce que la main-d’œuvre acquière les habiletés et les compétences pour accompagner cette croissance. Il s'agit d'une formation pratique qui se déroule dans un local aménagé tout près des espaces de production.</p> 
+	  </div>
+      <div id="content"> 
+        <center><img class="no-border" src="/kayak/images/tutorials/training/page1.png"/></center>
+      </div>
+   </div>
+
+   <div id="page-2" data-element="page" data-order="2">
+      <h1>Formation</h1>
+      <h2>Nature des dépenses</h2>
+      <div id="text">
+         <p>Les dépenses de formation sont de quatre ordres : les honoraires versés aux formateurs, les dépenses pour le matériel pédagogique, l'aménagement d'un local de formation et la rémunération des employés durant leur formation. </p>
+         <p>Les employés qui suivent une formation sont remplacés afin de ne pas nuire à la productivité de l'usine. Les salaires qu'ils reçoivent sont comptabilisés à l'item «Frais de formation» de l'«État des résultats».     </p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/training/page2.png"/></center>             
+      </div>   
+   </div>  
+
+   <div id="page-3" data-element="page" data-order="3">
+      <h1>Formation</h1>
+      <h2>Dépense de formation</h2>
+      <div id="text">
+         <p>Dans l'industrie du kayak, tous les fabricants offrent un minimum de formation à chaque année. Ce minimum correspond à 1% de la masse salariale, c'est-à-dire un pour cent de tous les salaires versés au cours d'une année. </p>
+         <p>Selon l'ambition de votre plan de développement, vous pouvez accroître ce pourcentage jusqu'à 3 %. Toutes les catégories d'employés participent à cette activité.   </p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/training/page3.png"/></center>             
+      </div>   
+   </div>  
+   
+ <div id="page-4" data-element="page" data-order="4">
+      <h1>Formation</h1>
+      <h2>Impact sur la productivité</h2>
+      <div id="text">
+         <p>La formation a un impact direct sur la productivité de l'usine. Par exemple, elle permet de réduire le temps de fabrication d'un kayak.</p>
+         <p>Il est essentiel d'accroître la formation lorsque vous faites l'acquisition de nouveaux fours. En effet, l'embauche de nouveaux employés a pour conséquence de diminuer la productivité générale de l'usine. La formation facilite l'intégration de ces employés et permet d'éviter une baisse trop marquée de la productivité.</p> 
+      </div>
+      <div id="content"> 
+        <center><div class="tuto-graph-container" id="graph-container"></div></center>
+      </div>
+      <script type="text/javascript" language="Javascript">
+        $.extend($.praxar, {
+      	  page4: function() {
+      		  $('#graph-container').highcharts({
+      			  chart: {type: 'areaspline'},
+      	        title: {text: ''},
+      	        xAxis: {
+      	      	    title: { text: 'Formation ($)' },
+      	      	    labels: { enabled: true },
+      	            categories: [
+      	                '-','','+'
+      	            ]
+      	        },
+      	        yAxis: {
+      	            title: { text: 'Productivité' },
+     	             labels: { 
+         	           	enabled: true,
+                  	    formatter: function() {
+                            if (this.value == 20) return '-';
+                            else if (this.value == 60) return '+';
+                            else return '';
+                         } 
+         	         }
+      	        },
+      	        series: [{
+      	      	  data: [20, 40, 60]
+      	        }]
+      	    });
+      	  }
+        });
+      </script>   </div>    
+
+   <div id="page-5" data-element="page" data-order="5"> 
+      <h1>Formation</h1>
+      <h2>Impact sur la qualité</h2>
+      <div id="text"> 
+         <p>Dans une usine de kayaks, les opérations sont peu automatisées. La qualité du produit fini est directement liée à la compétence des employés qui exécutent manuellement un grand nombre d'opérations.</p>
+         <p>Si vous fabriquez des kayaks haut de gamme, il est essentiel que vos employés suivent un programme annuel de formation. Même lorsqu'il s'agit de kayaks à bas prix, une main-d’œuvre bien formée assurera une constance dans la qualité des produits livrés.</p>
+      </div>
+      <div id="content"> 
+        <center><img class="no-border" src="/kayak/images/tutorials/training/page5.png"/></center>
+      </div>
+   </div>
+   
+   <div id="page-6" data-element="page" data-order="6">
+      <h1>Formation</h1>
+      <h2>Décision</h2>
+      <div id="text">
+         <p>À court terme, il peut sembler intéressant de couper dans les dépenses de formation. Vous risquez cependant d'accumuler un retard technologique par rapport à la concurrence. De plus, vos meilleurs employés peuvent vous quitter s'ils croient que leur développement professionnel sera freiné en demeurant à votre emploi.</p>
+         <p>La formation coûte cher. Au-delà d'un certain seuil, chaque dollar investi n'a plus le même impact sur l'entreprise. À vous de déterminer tout au long de la simulation la dépense qui semble raisonnable.</p>
+     </div>   
+      <div id="content">
+        <center><div class="tuto-graph-container" id="graph-container"></div></center>
+      </div>   
+      <script type="text/javascript" language="Javascript">
+        $.extend($.praxar, {
+      	  page6: function() {
+      		  $('#graph-container').highcharts({
+      			chart: {type: 'areaspline'},
+      	        title: {text: ''},
+      	        xAxis: {
+      	      	    title: { text: 'Dépenses de formation' },
+      	      	    labels: { enabled: true },
+      	            categories: [
+      	                '','-','','','','','+',''
+      	            ]
+      	        },
+      	        yAxis: {
+      	            title: { text: 'Impact de la formation' },
+     	             labels: { 
+         	           	enabled: true,
+                  	    formatter: function() {
+                            if (this.value == 20) return '-';
+                            else if (this.value == 60) return '+';
+                            else return '';
+                         } 
+         	         }
+      	        },
+      	        series: [{
+      	      	  data: [20, 42, 60, 70, 75, 78, 79, 79]
+      	        }]
+      	    });
+      	  }
+        });
+      </script>  
+   </div>  
+
+   <div id="page-7" data-element="page" data-order="7">
+      <h1>Formation</h1>
+      <h2>Questions et réponses</h2>
+      <div id="text"> 
+         <p>Révisons maintenant quelques concepts clés du tutoriel.</br></br>Pour chaque question à choix multiple, cliquez sur la réponse qui vous semble la meilleure. Si ce choix s’avère erroné, poursuivez jusqu'à ce que vous obteniez la bonne réponse.</p>
+      </div>
+      <div id="content" data-class-override="q-and-a-override">
+        <center> 
+           <div class="bg-blanc-10-no-gradient q-and-a-div">
+           <h4>Bonne réponse obtenue au...</h4>
+            <p class="q-and-a">
+              1<sup>er</sup> essai &nbsp:&nbsp 5 points<br/>
+              2<sup>e&nbsp</sup> essai &nbsp:&nbsp 4 points<br/>
+              3<sup>e&nbsp</sup> essai &nbsp:&nbsp 3 points<br/>
+              4<sup>e&nbsp</sup> essai &nbsp:&nbsp 2 points<br/>
+              5<sup>e&nbsp</sup> essai &nbsp:&nbsp 1 point&nbsp&nbsp<br/>
+            </p>
+           </div>
+        </center>
+      </div>
+   </div>
+  
+   <div id="page-8" data-element="question" data-order="8">
+      <div id="question-number">1</div>
+      <div id="question"> 
+         Pourquoi une entreprise devrait-elle investir dans la formation de ses employés?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Afin de réduire la masse salariale de l'entreprise</div>
+         <div class="choice" data-value="2">Afin d'augmenter la masse salariale de l'entreprise</div>
+         <div class="choice" data-value="3">Afin d'augmenter la capacité de l'usine</div>
+         <div class="choice" data-value="4">Afin d'améliorer la qualité et la productivité de l'usine</div>
+         <div class="choice" data-value="5">Afin de plaire au conseil d'administration</div>               
+      </div>
+ 	 <div id="goodAnswer"> 
+         La formation des travailleurs permet d'améliorer la productivité de l'usine ainsi que la qualité des produits finis. Le temps de fabrication des kayaks s'en trouve réduit et le nombre de retours de marchandises diminue.
+	 </div>
+   </div>
+
+   <div id="page-9" data-element="question" data-order="9">
+      <div id="question-number">2</div>
+      <div id="question"> 
+         Dans la simulation, quelle circonstance devrait inciter votre entreprise à investir davantage en formation?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Une baisse soudaine des ventes</div>
+         <div class="choice" data-value="2">Une récession économique</div>
+         <div class="choice" data-value="3">Un changement de directeur des ressources humaines</div>
+         <div class="choice" data-value="4">Une hausse des profits</div>
+         <div class="choice" data-value="5">L'achat de nouveaux fours</div>               
+      </div>
+	 <div id="goodAnswer"> 
+	     Suite à l'achat de fours, il faut embaucher de nouveaux employés. Il est alors essentiel d'augmenter le budget de formation afin de bien les préparer à assumer leurs nouvelles fonctions.
+	 </div>
+   </div>  
+   
+   <div id="page-10" data-element="question" data-order="10">
+      <div id="question-number">3</div>      
+      <div id="question"> 
+         Laquelle parmi les dépenses suivantes n'est pas comptabilisée à l'item «Frais de formation»?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">L'aménagement du local où se déroule la formation</div>
+         <div class="choice" data-value="2">Les honoraires du formateur</div>
+         <div class="choice" data-value="3">Le salaire des membres de la direction</div>
+         <div class="choice" data-value="4">Le salaire des employés qui suivent une formation</div>
+         <div class="choice" data-value="5">Le coût du matériel pédagogique</div>               
+      </div>
+	 <div id="goodAnswer"> 
+	     Toutes ces dépenses sont associées à la formation des employés sauf le salaire des membres de la direction. Ces derniers ne participent pas directement à la formation du personnel.
+	 </div>
+   </div>
+
+   <div id="page-11" data-element="question" data-order="11">
+      <div id="question-number">4</div>      
+      <div id="question"> 
+         Identifiez un effet possible du manque de formation dans une entreprise qui fabrique des kayaks.
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Le nombre de retours de marchandises va augmenter</div>
+         <div class="choice" data-value="2">Le nombre de retours de marchandises va diminuer</div>
+         <div class="choice" data-value="3">Le temps moyen de fabrication d'un kayak va diminuer</div>
+         <div class="choice" data-value="4">La qualité des produits finis va augmenter</div>
+         <div class="choice" data-value="5">Le recrutement de nouveaux employés sera facilité</div>               
+      </div>
+	 <div id="goodAnswer"> 
+	     Le manque de formation des employés aura un effet négatif sur la qualité des produits finis. Il y aura donc un plus grand nombre de retours de marchandises.
+	 </div>
+   </div>
+   
+   <div id="page-12" data-element="question" data-order="12">
+      <div id="question-number">5</div>      
+      <div id="question"> 
+         Laquelle des affirmations suivantes est vraie dans la simulation?
+      </div>   
+      <div id="choices" class="largeChoices">
+	     <div class="choice" data-value="1">Les fabricants de kayaks d'entrée de gamme ne devraient jamais investir dans la formation des employés</div>
+         <div class="choice" data-value="2">Les frais de formation sont remboursés par le gouvernement</div>
+         <div class="choice" data-value="3">Il faut investir dans la formation lorsqu'une entreprise est rentable et cesser d'investir lorsqu'elle perd de l'argent</div>
+         <div class="choice" data-value="4">Il faut augmenter le budget de formation lorsqu'une entreprise achète de nouveaux fours</div>
+         <div class="choice" data-value="5">L'investissement en formation n'a pas d'effet sur le recrutement et la rétention des employés</div>               
+      </div>
+	 <div id="goodAnswer"> 
+	     Le budget de formation ne doit pas nécessairement être égal dans le temps. La formation des employés devient plus importante lorsqu'une entreprise réalise des projets d'investissements et accroît ainsi sa main-d’œuvre. 
+	 </div>
+   </div> 
+      
+   </body>
+</html>

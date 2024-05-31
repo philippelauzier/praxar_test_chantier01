@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+   <div data-exercise-id="572E302C-3A3A-402A-98F8-8D655A69BCEC"></div>
+   
+   <div class="exercise-reference">
+      <h1>Chapitre 6</h1>
+      <h2>Le prix de vente</h2>
+      <h3>pp. 190-193.</h3>
+      <img src="/kayak/images/tutorials/book.jpg"/>             
+   </div>  
+   <div class="exercise-reference-teluq">
+      <h1>Chapitre 8</h1>
+      <h2>La gestion dans un environnement mondial</h2>
+      <h3>pp. 283-289.</h3>
+      <img src="/kayak/images/tutorials/book-teluq.jpg"/>   
+   </div> 
+
+   <div id="character-image"><img class="img-circle" src="/kayak/images/marketing-small.png"/></div>
+   <div id="page-1" data-element="page" data-order="1">
+      <h1>Prix de vente au détail</h1>
+      <h2>Responsabilité du manufacturier</h2>
+      <div id="text"> 
+         <p>Le prix de vente au détail représente la somme d'argent payée par le consommateur pour prendre possession d'un kayak. Ce montant est versé au détaillant.</p> 
+         <p>C'est au manufacturier que revient la responsabilité de fixer un prix de vente suggéré pour les produits qu'il fabrique. Les détaillants peuvent suivre cette indication ou s'en écarter. Le prix de vente au détail suggéré par le fabricant représente cependant un repère important dans le marché.</p>
+      </div>
+      <div id="content"> 
+        <center><img class="no-border" src="/kayak/images/tutorials/pricing/page1.png"/></center>
+      </div>
+   </div>
+
+   <div id="page-2" data-element="page" data-order="2"> 
+      <h1>Prix de vente au détail</h1>
+      <h2>La marge du détaillant</h2>
+      <div id="text"> 
+         <p>Lors de la vente d'un kayak, le revenu est partagé entre le détaillant (25 à 30% du montant) et le manufacturier (70 à 75% du montant). C'est le manufacturier qui fixe le pourcentage versé au détaillant. Si le montant est trop bas, le détaillant fera peu d'effort pour vendre des kayaks.</p>
+         <p>Avec sa part de la vente, le manufacturier doit couvrir l'ensemble de ses dépenses et dégager un profit. </p>
+      </div>
+      <div id="content">
+         <center><div class="tuto-graph-container" id="graph-container"></div></center>
+      </div>
+      <script type="text/javascript" language="Javascript">
+        $.extend($.praxar, {
+           page2: function() {
+              $('#graph-container').highcharts({
+                 chart: {
+                    plotShadow: true
+                },
+                title: {
+                    text: ''
+                },
+                plotOptions: {
+                    pie: {
+                        dataLabels: {
+                           format: '<span style="font-weight: 400;">{point.name}</span>',
+                            style: {
+                                fontSize: '14px',
+                                fontWeight: '400',
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    type: 'pie',
+                    name: 'Browser share',
+                    data: [
+                        {name: 'Fabricant (70%-75%)', y: 70.0, color: 'rgba(49,57,70,0.7)', sliced: true},
+                        {name: 'Détaillant (25%-30%)', y: 30.0, color: 'rgba(49,57,70,0.7)', sliced: true}
+                        
+                    ]
+                }]
+             });
+           }
+        });
+      </script>    
+   </div>
+   
+   <div id="page-3" data-element="page" data-order="3">
+      <h1>Prix de vente au détail</h1>
+      <h2>Le coût des marchandises vendues</h2>
+      <div id="text">
+         <p>Le coût des marchandises vendues tient compte de l'ensemble des dépenses associées directement à la fabrication d'un kayak. Ces dépenses correspondent à l'achat de la matière première, aux salaires des employés qui fabriquent les kayaks ainsi qu'aux dépenses générales de l'usine (salaires des contremaîtres, coût de l'énergie, etc.). </p>
+         <p>Dans la simulation, il est possible de consulter à chaque année le détail du coût des marchandises vendues dans le rapport intitulé <b>Coûts de fabrication</b>.</p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/pricing/page3_fr.png"/></center>             
+      </div>   
+   </div>  
+
+   <div id="page-4" data-element="page" data-order="4">
+      <h1>Prix de vente au détail</h1>
+      <h2>Les frais de transport</h2>
+      <div id="text">
+         <p>Dans la simulation, les frais d'expédition des kayaks vers les détaillants sont payés par le manufacturier. Votre entreprise doit donc évaluer ces coûts et les inclure dans le prix de vente.</p>
+         <p>Les frais d'expédition varient en fonction de la distance. Plus un territoire est éloigné de votre usine, plus les frais d'expédition seront élevés.</p>
+      </div>
+      <div id="content">
+        <center><div class="tuto-graph-container" id="graph-container"></div></center>
+      </div>   
+      <script type="text/javascript" language="Javascript">
+        $.extend($.praxar, {
+           page4: function() {
+         	  $('#graph-container').highcharts({
+                 chart: {
+                     type: 'column'
+                 },
+                 title: {
+                     text: ''
+                 },
+                 xAxis: {
+                     type: 'category',
+                     title: { 
+                     	text: 'Marchés',
+                     	offset: 110
+                     },                     
+                     labels: {
+                         rotation: -45,
+                         style: {
+                       		fontSize: '16px'
+                          }
+                     }
+                 },
+                 yAxis: {
+                     min: 0,
+                     title: {
+                         text: 'Coût du transport'
+                     },
+     	             labels: { 
+         	           	enabled: true,
+                  	    formatter: function() {
+                            if (this.value == 10) return '-';
+                            else if (this.value == 30) return '+';
+                            else return '';
+                         } 
+         	         }
+                 },
+                 series: [{
+                     name: '',
+                     data: [
+                         ['Canada', 10],
+                         ['Est des<br/> États-Unis', 21],
+                         ['Ouest des<br/> États-Unis', 23],
+                         {name: 'Mexique', y: 32}
+                     ]
+                 }]
+             });
+           }
+        });
+      </script>  
+   </div>  
+
+   <div id="page-5" data-element="page" data-order="5">
+      <h1>Prix de vente au détail</h1>
+      <h2>La marge brute</h2>
+      <div id="text">
+         <p>La marge brute est un concept utile mais qui n'est pas normalisé. Elle correspond à la différence entre le revenu que reçoit le manufacturier pour la vente d'un kayak et les dépenses associées à sa fabrication, soit le coût des marchandises vendues et les frais de transport.</p>
+         <p>Pour demeurer en activité et financer sa croissance, une entreprise doit dégager une marge brute d'au moins 25%. Dans la simulation, les entreprises les plus rentables peuvent même atteindre une marge brute de 40%. </p>
+      </div>
+      <div id="content">
+         <center><div class="tuto-graph-container" id="graph-container"></div></center>
+      </div>
+      <script type="text/javascript" language="Javascript">
+        $.extend($.praxar, {
+           page5: function() {
+              $('#graph-container').highcharts({
+                 chart: {type: 'area'},
+      	         title: {text: ''},
+      	         xAxis: {
+      	      	    title: { text: '' },
+      	            categories: ['','','','','']
+      	         },
+      	         yAxis: {
+      	            title: { text: '' },
+                    max: 100,
+      	            labels: { 
+      	               enabled: true,
+      	               formatter: function() {
+      	                  return this.value + '%';
+      	               }
+                    }
+      	         },
+                 legend: {
+                   enabled: true,
+                   style: {
+                      fontFamily: 'Roboto',
+                  	  fontWeight: '300',
+                  	  color: '#313946',
+                  	  fontSize: '18px'
+               	   }
+                 },
+      	         series: [{
+                    name: 'Marge brute', 
+                    data: [100, 100, 100, 100, 100]
+      	         },{
+                    name: 'Dépenses directes',
+                    data: [83, 82, 78, 65, 60]
+      	         }]             
+             });
+           }
+        });
+      </script>      
+   </div>  
+   
+   <div id="page-6" data-element="page" data-order="6">
+      <h1>Prix de vente au détail</h1>
+      <h2>Le calculateur</h2>
+      <div id="text">
+         <p>La simulation propose un calculateur pour faciliter la fixation du prix de vente au détail. Ce calculateur prend en compte l'ensemble des coûts anticipés et calcule le prix de vente en fonction de la marge brute que vous visez. Il prend même en compte le taux de change lors de ventes à l'exportation.   </p>
+         <p>Chaque fois que vous prenez une décision qui a un impact sur les coûts, le calcul de la marge brute change. Il est alors conseillé d'avoir recours au calculateur pour mettre à jour le prix de vente au détail.</p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/pricing/page6_fr.png"/></center>             
+      </div>   
+   </div>  
+   
+   <div id="page-7" data-element="page" data-order="7">
+      <h1>Prix de vente au détail</h1>
+      <h2>Les frais d'exploitation</h2>
+      <div id="text">
+         <p>Certaines dépenses d'une entreprise ne sont pas associées directement à la fabrication des produits. On regroupe généralement les frais d'exploitation en trois catégories : les frais de ventes (salaires et commissions des représentants, frais de voyage, etc.), les frais d'administration (salaires du personnel de bureau et des cadres, assurances, etc.) et les frais financiers.</p>
+         <p>Dans la simulation, il est possible de suivre l'évolution de ces dépenses dans le rapport intitulé <b>État des résultats</b>.</p>
+      </div>
+      <div id="content">
+        <center><img class="no-border" src="/kayak/images/tutorials/pricing/page7_fr.png"/></center>             
+      </div>   
+   </div>  
+
+   <div id="page-8" data-element="page" data-order="8">
+      <h1>Prix de vente au détail</h1>
+      <h2>Le profit avant impôt</h2>
+      <div id="text">
+         <p>La marge brute d'une entreprise doit être suffisamment élevée pour couvrir l'ensemble des frais d'exploitation encourus au cours d'une année. </p>
+         <p>Le surplus qui se dégage alors s'appelle le <b>profit avant impôt</b>. Le but de la simulation est de dégager le profit le plus élevé possible. Le choix du prix de vente a donc un impact direct sur la performance de votre entreprise. </p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/pricing/page8_fr.png"/></center>             
+      </div>   
+   </div>    
+   
+   <div id="page-9" data-element="page" data-order="9">
+      <h1>Prix de vente au détail</h1>
+      <h2>La concurrence</h2>
+      <div id="text">
+         <p>La fixation du prix de vente ne doit pas seulement prendre en compte les coûts de l'entreprise. Il faut également surveiller les prix proposés par les concurrents pour des produits semblables sur les mêmes territoires.</p>
+         <p>Lorsque les consommateurs choisissent entre deux kayaks semblables, ils sont portés à choisir le moins cher. La forte concurrence entre les fabricants de kayaks conduit souvent à des baisses de prix et à une rentabilité réduite. </p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/pricing/page9.png"/></center>             
+      </div>   
+   </div>    
+   
+   <div id="page-10" data-element="page" data-order="10">
+      <h1>Prix de vente au détail</h1>
+      <h2>Veille concurrentielle</h2>
+      <div id="text">
+         <p>Lorsqu'une entreprise vend un produit différencié et que la concurrence est faible, il est possible d'augmenter le prix de vente au détail et par conséquent les profits. Une surveillance constante de la concurrence permet d'identifier les autres produits sur le marché et d'éviter une confrontation directe au niveau des prix.</p>
+         <p>Dans la simulation, le <b>Podium</b> constitue une excellente source d'information sur la concurrence.</p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/pricing/page10.png"/></center>             
+      </div>   
+   </div>    
+   
+   <div id="page-11" data-element="page" data-order="11">
+      <h1>Prix de vente au détail</h1>
+      <h2>Questions et réponses</h2>
+      <div id="text"> 
+         <p>Révisons maintenant quelques concepts clés du tutoriel.</br></br>Pour chaque question à choix multiple, cliquez sur la réponse qui vous semble la meilleure. Si ce choix s’avère erroné, poursuivez jusqu'à ce que vous obteniez la bonne réponse.</p>
+      </div>
+      <div id="content" data-class-override="q-and-a-override">
+        <center> 
+           <div class="bg-blanc-10-no-gradient q-and-a-div">
+           <h4>Bonne réponse obtenue au...</h4>
+            <p class="q-and-a">
+              1<sup>er</sup> essai &nbsp:&nbsp 5 points<br/>
+              2<sup>e&nbsp</sup> essai &nbsp:&nbsp 4 points<br/>
+              3<sup>e&nbsp</sup> essai &nbsp:&nbsp 3 points<br/>
+              4<sup>e&nbsp</sup> essai &nbsp:&nbsp 2 points<br/>
+              5<sup>e&nbsp</sup> essai &nbsp:&nbsp 1 point&nbsp&nbsp<br/>
+            </p>
+           </div>
+        </center>
+      </div>
+   </div>
+  
+   <div id="page-12" data-element="question" data-order="12">
+      <div id="question-number">1</div>
+      <div id="question"> 
+         Qui détermine le prix de vente au détail suggéré d'un kayak?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Les gouvernements</div>
+         <div class="choice" data-value="2">Les représentants des ventes</div>
+         <div class="choice" data-value="3">Les détaillants</div>
+         <div class="choice" data-value="4">Les manufacturiers</div>
+         <div class="choice" data-value="5">Les consommateurs</div>                  
+      </div>
+	 <div id="goodAnswer"> 
+	     Le fabricant propose un prix de vente au détail. Les détaillants et les consommateurs utilisent ce prix comme un indicateur de la valeur d'un kayak.
+	 </div>
+   </div>  
+   
+   <div id="page-13" data-element="question" data-order="13">
+      <div id="question-number">2</div>
+      <div id="question"> 
+         Qu'est-ce que la marge brute d'un produit?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">C'est le profit avant impôt que génère une entreprise</div>
+         <div class="choice" data-value="2">C'est la part du prix de vente d'un kayak qui revient au manufacturier</div>
+         <div class="choice" data-value="3">C'est le prix de vente au détail suggéré par le manufacturier</div>
+         <div class="choice" data-value="4">C'est le coût des marchandises vendues par un fabricant de kayak</div>
+         <div class="choice" data-value="5">C'est le montant reçu par le fabricant pour la vente d'un produit moins les coûts associés directement à sa fabrication</div>                  
+      </div>
+	 <div id="goodAnswer"> 
+	     La marge brute est la différence entre le revenu du manufacturier lors de la vente d'un kayak et les coûts directs pour le produire. 
+	 </div>
+   </div>
+   
+   <div id="page-14" data-element="question" data-order="14">
+      <div id="question-number">3</div>      
+      <div id="question"> 
+        Pour fixer le prix d'un kayak, il faut prendre en compte tous les facteurs suivants sauf un. Lequel?
+      </div>   
+      <div id="choices" class="largeChoices">
+	     <div class="choice" data-value="1">Le prix des produits concurrents sur un même marché</div>
+         <div class="choice" data-value="2">Le nom du produit</div>
+         <div class="choice" data-value="3">La marge brute visée</div>
+         <div class="choice" data-value="4">Les coûts directs associés à sa fabrication</div>
+         <div class="choice" data-value="5">Le taux de change lorsque le produit est exporté</div>                  
+      </div>
+	 <div id="goodAnswer"> 
+	     Le prix est relié à la plupart des coûts d'une entreprise mais certainement pas au nom du produit. 
+	 </div>
+   </div>
+   
+   <div id="page-15" data-element="question" data-order="15">
+      <div id="question-number">4</div>      
+      <div id="question"> 
+        Quand faut-il s'intéresser à la concurrence dans la décision de fixer les prix?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Quand les concurrents ont des coûts plus élevés que ceux de notre entreprise</div>
+         <div class="choice" data-value="2">Quand les concurrents fabriquent des produits différents de ceux de notre entreprise</div>
+         <div class="choice" data-value="3">Quand les concurrents commercialisent leurs produits sur les mêmes marchés que notre entreprise</div>
+         <div class="choice" data-value="4">Quand les entreprises concurrentes sont plus rentables que notre entreprise</div>
+         <div class="choice" data-value="5">Aucune de ces réponses</div>                  
+      </div>
+	 <div id="goodAnswer"> 
+	     Les concurrents ne s'affrontent pas sur tous les marchés. Il faut s'intéresser aux concurrents qui sont présents sur les mêmes marchés que notre entreprise.
+	 </div>
+   </div>
+   
+   <div id="page-16" data-element="question" data-order="16">
+      <div id="question-number">5</div>      
+      <div id="question"> 
+        Laquelle des affirmations suivantes est vraie?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Les consommateurs achètent toujours le produit le moins cher dans un marché</div>
+         <div class="choice" data-value="2">Les consommateurs achètent toujours le produit le plus cher dans un marché</div>
+         <div class="choice" data-value="3">La marge brute d'un produit est égale au profit avant impôt d'une entreprise</div>
+         <div class="choice" data-value="4">L'entreprise qui a les coûts les plus bas est celle qui peut se permettre de fixer les prix les plus bas</div>
+         <div class="choice" data-value="5">L'entreprise qui a les coûts les plus bas devrait avoir la marge brute la plus élevée</div>                  
+      </div>
+	 <div id="goodAnswer"> 
+	     Il est normal que l'entreprise dont les coûts sont bas puisse se permettre de vendre ses kayaks à bas prix.
+	 </div>
+   </div>
+   
+   </body>
+</html>

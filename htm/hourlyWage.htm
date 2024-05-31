@@ -1,0 +1,270 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+   <div data-exercise-id="2891E12A-B3F3-40C0-81AF-EA4E09B5DCE4"></div>
+   
+   <div class="exercise-reference">
+      <h1>Chapitre 9</h1>
+      <h2>La rémunération</h2>
+      <h3>pp. 293-296.</h3>
+      <img src="/kayak/images/tutorials/book.jpg"/>             
+   </div>  
+   <div class="exercise-reference-teluq">
+      <h1>Chapitre 6</h1>
+      <h2>La gestion des ressources humaines</h2>
+      <h3>pp. 227-230.</h3>
+      <img src="/kayak/images/tutorials/book-teluq.jpg"/>   
+   </div> 
+
+   <div id="character-image"><img class="img-circle" src="/kayak/images/rh-small.png"/></div>
+
+   <div id="page-1" data-element="page" data-order="1">
+      <h1>Salaire horaire</h1>
+      <h2>Définition</h2>
+      <div id="text"> 
+         <p>Le salaire est le montant versé par une entreprise à un employé en contrepartie de son travail. Dans le secteur manufacturier, le salaire des ouvriers est généralement exprimé sous forme de taux horaire. Le salaire annuel correspond donc au taux horaire multiplié par le nombre d'heures travaillées.</p> 
+         <p>D'autres éléments viennent également s'ajouter à la rémunération d'un employé : avantages sociaux, primes, etc. </p> 
+     </div>  
+      <div id="content"> 
+        <center><img class="no-border" src="/kayak/images/tutorials/hourlyWage/page1.png"/></center>
+      </div>
+   </div>
+
+      <div id="page-2" data-element="page" data-order="2">
+      <h1>Salaire horaire</h1>
+      <h2>Facteurs légaux et économiques</h2>
+      <div id="text">
+         <p>Le salaire horaire résulte d'une entente conclue entre une entreprise et un employé. Les termes de l'entente doivent respecter les lois en vigueur, notamment en ce qui concerne le salaire minimum. La simulation ne vous permet pas d'établir un taux horaire qui serait trop bas.</p>
+         <p>Le salaire horaire doit également prendre en compte le contexte économique du marché du travail. La simulation ne vous permettra pas d'établir un taux horaire qui soit exagérément élevé. Les choix que vous faites sont donc contenus entre une borne minimale et une borne maximale.</p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/hourlyWage/page2.png"/></center>             
+      </div>   
+   </div>  
+   
+   <div id="page-3" data-element="page" data-order="3">
+      <h1>Salaire horaire</h1>
+      <h2>Stratégie de rémunération</h2>
+      <div id="text">
+         <p>Le salaire horaire que vous offrez doit s'ajuster à la stratégie de votre entreprise. Ainsi, si vous souhaitez commercialiser des kayaks d'entrée de gamme, vous chercherez à maintenir les coûts au plus bas. Les salaires que vous offrirez seront sans doute inférieurs à la moyenne de l'industrie.</p>
+         <p>À l'inverse, si vous souhaitez que vos kayaks se distinguent par leur qualité, vous chercherez à recruter les employés les plus compétents de l'industrie. Pour les attirer, il faudra offrir des salaires supérieurs à ceux des concurrents.</p> 
+      </div>
+      <div id="content">
+        <center><div class="tuto-graph-container" id="graph-container"></div></center>
+      </div>   
+      <script type="text/javascript" language="Javascript">
+        $.extend($.praxar, {
+      	  page3: function() {
+      		  $('#graph-container').highcharts({
+      	        chart: {type: 'areaspline'},
+      	        title: {text: ''},
+      	        xAxis: {
+      	      	    title: { text: 'Salaire ($)' },
+      	      	    labels: { enabled: true },
+      	            categories: [
+      	                '-','','+'
+      	            ]
+      	        },
+      	        yAxis: {
+      	            title: { text: 'Qualité des kayaks' },
+     	             labels: { 
+         	           	enabled: true,
+                  	    formatter: function() {
+                            if (this.value == 20) return '-';
+                            else if (this.value == 60) return '+';
+                            else return '';
+                         } 
+         	         }
+      	        },
+      	        series: [{
+      	      	  data: [20, 40, 60]
+      	        }]
+      	    });
+      	  }
+        });
+      </script>    
+   </div>    
+
+   <div id="page-4" data-element="page" data-order="4"> 
+      <h1>Salaire horaire</h1>
+      <h2>Postes de travail</h2>
+      <div id="text"> 
+         <p>Tous les employés de l'usine ne reçoivent pas le même salaire horaire. Vous devez utiliser la description de chaque poste afin de comprendre les compétences requises pour l'occuper. Plus ces compétences sont rares, plus vous devrez offrir un salaire intéressant afin d'attirer des candidats.</p>
+         <p>La simulation propose d'établir le salaire horaire de quatre postes de travail : ingénieur en développement de produits, superviseur de production, opérateur de fours et secrétaire comptable. </p>
+      </div>
+      <div id="content"> 
+        <center><img class="no-border" src="/kayak/images/tutorials/hourlyWage/page4.png"/></center>
+      </div>
+   </div>
+   
+   <div id="page-5" data-element="page" data-order="5">
+      <h1>Salaire horaire</h1>
+      <h2>Ingénieur</h2>
+      <div id="text">
+         <p>Sous l'autorité du directeur de la production, l'ingénieur en développement de produits participe activement aux activités de conception, de design, de tests et de mise en production des nouveaux kayaks.</p>
+         <p>Il voit à l'implantation des nouveaux procédés de fabrication, s'assure de l'utilisation optimale des technologies et des ressources disponibles, documente les procédés de fabrication, contrôle le respect des échéanciers et gère tous les problèmes qui peuvent survenir lors de l'implantation de projets d'amélioration.</p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/hourlyWage/page5.png"/></center>             
+      </div>   
+   </div>  
+
+   <div id="page-6" data-element="page" data-order="6">
+      <h1>Salaire horaire</h1>
+      <h2>Superviseur</h2>
+      <div id="text">
+         <p>Sous l'autorité du directeur de la production, le superviseur encadre toutes les activités liées à la production. Il planifie, organise et supervise les opérations quotidiennes de l'usine selon les normes et procédures établies.</p>
+         <p>Le superviseur encadre et mobilise le personnel de production. Il évalue les gens sous son autorité et travaille au développement de leurs compétences. Il s'assure que le travail soit réalisé de façon sécuritaire. Il est ultimement responsable du respect du plan de production.   </p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/hourlyWage/page6.png"/></center>             
+      </div>   
+   </div>  
+
+   <div id="page-7" data-element="page" data-order="7">
+      <h1>Salaire horaire</h1>
+      <h2>Opérateur de fours</h2>
+      <div id="text">
+         <p>Sous l'autorité du superviseur d'usine, l'opérateur de fours s'assure que les équipements soient conformes et prêts à fonctionner. Il prépare le moule, ajoute la poudre de polyéthylène, introduit le moule dans le four, surveille la cuisson, retire le moule et procède au démoulage, réalise l'assemblage ainsi que la finition et, finalement, prépare le kayak pour l'expédition. </p>
+         <p>Dans votre entreprise, les employés de l'usine travaillent également à l'entrepôt et font l'entretien général des lieux.</p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/hourlyWage/page7.png"/></center>             
+      </div>   
+   </div>  
+   
+   <div id="page-8" data-element="page" data-order="8">
+      <h1>Salaire horaire</h1>
+      <h2>Secrétaire comptable</h2>
+      <div id="text">
+         <p>Sous l'autorité du directeur général, le (la) secrétaire comptable assure à la fois des missions diversifiées de secrétariat et des missions de comptabilité portant sur la réalisation et le suivi des travaux comptables. </p>
+         <p>Il s'agit d'un poste pivot au sein d'une PME, car le secrétaire comptable est en relation avec tous les employés, avec les fournisseurs et les clients ainsi qu'avec les partenaires financiers et les gouvernements.   </p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/hourlyWage/page8.png"/></center>             
+      </div>   
+   </div>  
+
+   <div id="page-9" data-element="page" data-order="9">
+      <h1>Salaire horaire</h1>
+      <h2>Principe d'équité</h2>
+      <div id="text">
+         <p>La politique salariale doit contribuer à maintenir un climat social serein au sein d'une entreprise. Pour ce faire, vous avez établi un certain nombre de règles internes qui sont communiquées à tous les employés et qui visent l'équité entre les personnes. </p>
+         <p>Par exemple, l'une des mesures mises de l'avant est d'offrir le même salaire aux hommes ou aux femmes qui occupent un même poste et qui possèdent le même niveau d'expérience. Cette mesure a pour effet de respecter le principe <i>«à travail égal salaire égal»</i>.  </p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/hourlyWage/page9.png"/></center>             
+      </div>   
+   </div>  
+
+   <div id="page-10" data-element="page" data-order="10">
+      <h1>Salaire horaire</h1>
+      <h2>Questions et réponses</h2>
+      <div id="text"> 
+         <p>Révisons maintenant quelques concepts clés du tutoriel.</br></br>Pour chaque question à choix multiple, cliquez sur la réponse qui vous semble la meilleure. Si ce choix s’avère erroné, poursuivez jusqu'à ce que vous obteniez la bonne réponse.</p>
+      </div>
+      <div id="content" data-class-override="q-and-a-override">
+        <center> 
+           <div class="bg-blanc-10-no-gradient q-and-a-div">
+           <h4>Bonne réponse obtenue au...</h4>
+            <p class="q-and-a">
+              1<sup>er</sup> essai &nbsp:&nbsp 5 points<br/>
+              2<sup>e&nbsp</sup> essai &nbsp:&nbsp 4 points<br/>
+              3<sup>e&nbsp</sup> essai &nbsp:&nbsp 3 points<br/>
+              4<sup>e&nbsp</sup> essai &nbsp:&nbsp 2 points<br/>
+              5<sup>e&nbsp</sup> essai &nbsp:&nbsp 1 point&nbsp&nbsp<br/>
+            </p>
+           </div>
+        </center>
+      </div>   </div>
+  
+   <div id="page-11" data-element="question" data-order="11">
+      <div id="question-number">1</div>
+      <div id="question"> 
+         Lequel parmi les éléments suivants est considéré comme un salaire?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Le montant versé par l'entreprise en contrepartie du travail effectué</div>
+         <div class="choice" data-value="2">Les congés et les vacances</div>
+         <div class="choice" data-value="3">Les frais de déplacement et séjour versés aux représentants lorsqu'ils rencontrent des clients</div>
+         <div class="choice" data-value="4">Les avantages sociaux tels que l'assurance-salaire et l'assurance-médicaments</div>
+         <div class="choice" data-value="5">Les rabais offerts aux employés lors de l'achat d'un kayak fabriqué par la compagnie</div>               
+      </div>
+	 <div id="goodAnswer"> 
+	     Le salaire est le montant d'argent que reçoit l'employé en contrepartie du travail qu'il réalise pour l'entreprise. Le salaire correspond au nombre d'heures travaillées multiplié par le taux horaire.
+	 </div>
+   </div>  
+   
+   <div id="page-12" data-element="question" data-order="12">
+      <div id="question-number">2</div>
+      <div id="question"> 
+         Pour établir le salaire horaire d'un poste de travail, il faut tenir compte de tous les éléments suivants sauf un. Lequel?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Les compétences recherchées pour ce poste</div>
+         <div class="choice" data-value="2">La capacité de payer de l'entreprise</div>
+         <div class="choice" data-value="3">Le nombre de pays où les kayaks sont exportés</div>
+         <div class="choice" data-value="4">Le positionnement des produits de l'entreprise : entrée de gamme ou haut de gamme</div>
+         <div class="choice" data-value="5">La réglementation sur le salaire minimum</div>               
+      </div>
+	 <div id="goodAnswer"> 
+         Le salaire horaire est influencé par les conditions économiques et légales qui prévalent dans la région où est située l'usine. Le fait que les produits soient destinés au marché local ou exportés a peu d'impact sur les salaires.
+	 </div>
+   </div>    
+
+   <div id="page-13" data-element="question" data-order="13">
+      <div id="question-number">3</div>      
+      <div id="question"> 
+         J'occupe un poste pivot au sein de l'entreprise, ce qui me met en relation avec tous les employés, avec les fournisseurs et les clients, ainsi qu'avec les partenaires financiers et les gouvernements. Je travaille sous l'autorité du directeur général. Qui suis-je?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Président(e) du conseil d'administration	</div>
+         <div class="choice" data-value="2">Ingénieur</div>
+         <div class="choice" data-value="3">Superviseur</div>
+         <div class="choice" data-value="4">Opérateur de fours</div>
+         <div class="choice" data-value="5">Secrétaire comptable</div>               
+      </div>
+	 <div id="goodAnswer"> 
+	     Il s'agit du secrétaire comptable qui s'occupe à la fois du secrétariat et des opérations comptables.
+	 </div>
+   </div> 
+
+   <div id="page-14" data-element="question" data-order="14">
+      <div id="question-number">4</div>      
+      <div id="question"> 
+         Je vois à l'implantation des nouveaux procédés de fabrication et je m'assure de l'utilisation optimale des technologies et des ressources disponibles. Qui suis-je?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Directeur général</div>
+         <div class="choice" data-value="2">Ingénieur</div>
+         <div class="choice" data-value="3">Superviseur</div>
+         <div class="choice" data-value="4">Opérateur de fours</div>
+         <div class="choice" data-value="5">Secrétaire comptable</div>               
+      </div>
+	 <div id="goodAnswer"> 
+	     Il s'agit de l'ingénieur qui supervise toutes les opérations reliées à la planification et au contrôle des opérations dans l'usine.
+	 </div>
+   </div>
+   
+   <div id="page-15" data-element="question" data-order="15">
+      <div id="question-number">5</div>      
+      <div id="question"> 
+        Qu'est-ce au juste qu'une politique d'équité salariale au sein d'une entreprise?
+      </div>   
+      <div id="choices" class="largeChoices">
+	     <div class="choice" data-value="1">Tous les employés reçoivent le même salaire</div>
+         <div class="choice" data-value="2">Tous les employés possèdent les mêmes compétences</div>
+         <div class="choice" data-value="3">Tous les employés travaillent sous l'autorité du directeur général</div>
+         <div class="choice" data-value="4">Hommes et femmes reçoivent le même salaire lorsqu'ils occupent des postes différents dans l'entreprise</div>
+         <div class="choice" data-value="5">Hommes et femmes reçoivent le même salaire s'ils occupent des postes équivalents dans l'entreprise.</div>                  
+      </div>
+	 <div id="goodAnswer"> 
+	     Le principe de l'équité salariale est simple : «À travail égal salaire égal».
+	 </div>
+   </div>
+      
+   </body>
+</html>

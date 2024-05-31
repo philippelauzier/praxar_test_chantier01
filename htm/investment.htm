@@ -1,0 +1,265 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+   <div data-exercise-id="5C9CFA3B-FA07-477C-A4DF-3C56D6FF8A77"></div>
+   
+   <div class="exercise-reference">
+      <h1>Chapitre 7</h1>
+      <h2>La conception du processus de production</h2>
+      <h3>pp. 222-231.</h3>
+      <img src="/kayak/images/tutorials/book.jpg"/>             
+   </div>  
+   <div class="exercise-reference-teluq">
+      <h1>Chapitre 3</h1>
+      <h2>La planification</h2>
+      <h3>pp. 84-90.</h3>
+      <img src="/kayak/images/tutorials/book-teluq.jpg"/>   
+   </div> 
+
+   <div id="character-image"><img class="img-circle" src="/kayak/images/finance-small.png"/></div>
+
+   <div id="page-1" data-element="page" data-order="1">
+      <h1>Investissement</h1>
+      <h2>La demande</h2>
+      <div id="text"> 
+         <p>Tout projet d'expansion doit prendre en compte les besoins futurs du marché. Bien qu'il existe plusieurs outils mathématiques pour prévoir la demande à court, moyen et long terme, l'avenir ne peut jamais être connu avec certitude.</p> 
+         <p>Même si la prudence est de mise, vous pouvez avoir confiance dans la force du marché du kayak. Les consommateurs nord-américains sont de plus en plus préoccupés par leur santé et s'adonnent à des loisirs actifs. La pratique du kayak correspond tout à fait aux tendances du marché.</p> 
+	  </div>
+      <div id="content"> 
+         <center><img class="no-border" src="/kayak/images/tutorials/investment/page1.png"/></center>
+      </div>
+   </div>
+
+   <div id="page-2" data-element="page" data-order="2">
+      <h1>Investissement</h1>
+      <h2>La capacité</h2>
+      <div id="text">
+         <p>Pour répondre à la demande croissante, votre conseil d'administration souhaite s'engager dans un plan d'expansion rapide. Il consent à investir des sommes importantes pour accroître la capacité de l'usine et ainsi répondre à la demande des marchés américain et mexicain. </p>
+         <p>La capacité d'une usine de kayaks se mesure au nombre de fours. Ces derniers coûtent cher et occupent beaucoup d'espace. Il n'est pas possible de les louer; il faut les acheter et par la suite réaménager l'usine. Une période de rodage des équipements est toujours nécessaire.</p>
+      </div>
+      <div id="content">
+        <center><div class="tuto-graph-container" id="graph-container"></div></center>
+      </div>   
+      <script type="text/javascript" language="Javascript">
+        $.extend($.praxar, {
+      	  page2: function() {
+      		  $('#graph-container').highcharts({
+      			chart: {type: 'areaspline'},
+      	        title: {text: ''},
+      	        xAxis: {
+      	      	    title: { text: 'Nombre de fours' },
+      	      	    labels: { enabled: true },
+      	            categories: [
+      	                '-','','+'
+      	            ]
+      	        },
+      	        yAxis: {
+      	            title: { text: 'Capacité de production' },
+     	             labels: { 
+         	           	enabled: true,
+                  	    formatter: function() {
+                            if (this.value == 20) return '-';
+                            else if (this.value == 60) return '+';
+                            else return '';
+                         } 
+         	         }
+      	        },
+      	        series: [{
+      	      	  data: [20, 40, 60]
+      	        }]
+      	    });
+      	  }
+        });
+      </script>  
+   </div>  
+
+   <div id="page-3" data-element="page" data-order="3">
+      <h1>Investissement</h1>
+      <h2>Autorisation</h2>
+      <div id="text">
+         <p>Comme l'achat de fours représente un investissement important, il n'est pas possible de procéder sans avoir préalablement reçu l'aval du conseil d'administration. Lisez attentivement les directives qui vous sont transmises à chaque année par la voix de la présidente du C.A. Elle vous communiquera les priorités d'investissement pour la prochaine année.</p>
+         <p>Lorsque vous êtes autorisé à investir, analysez la demande à moyen terme. Sur la base de vos prévisions, déterminez si vous achetez un, deux ou trois fours additionnels. Ne soyez pas trop ambitieux. La capacité inutilisée coûte cher et ne rapporte pas.   </p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/investment/page3_fr.png"/></center>             
+      </div>   
+   </div>  
+   
+ <div id="page-4" data-element="page" data-order="4">
+      <h1>Investissement</h1>
+      <h2>Amortissement</h2>
+      <div id="text">
+         <p>Un four est un actif dont la durée de vie peut dépasser 10 ans. Les fours sont comptabilisés au «Bilan» de votre entreprise. Ils font partie des immobilisations corporelles et apparaissent à l'item «Machinerie, équipements et outillage». </p>
+         <p>À mesure que les équipements prennent de l'âge, leur valeur au bilan diminue. Le coût d'un four est ainsi étalé sur toute sa durée d'utilisation. On désigne sous le nom d'amortissement la perte de valeur d'un bien. La portion annuelle d'amortissement est considérée comme une dépense qui est soustraite des revenus.</p> 
+      </div>
+      <div id="content">
+        <center><div class="tuto-graph-container" id="graph-container"></div></center>
+      </div>   
+      <script type="text/javascript" language="Javascript">
+        $.extend($.praxar, {
+      	  page4: function() {
+      		  $('#graph-container').highcharts({
+        		chart: {type: 'areaspline'},
+    	        title: {text: ''},
+    	        xAxis: {
+    	      	    title: { text: 'Age d\'un four' },
+    	      	    labels: { enabled: true },
+    	            categories: [
+    	                '-','','+'
+    	            ]
+    	        },
+    	        yAxis: {
+    	            title: { text: 'Valeur au bilan' },
+   	             labels: { 
+       	           	enabled: true,
+                	    formatter: function() {
+                          if (this.value == 20) return '-';
+                          else if (this.value == 60) return '+';
+                          else return '';
+                       } 
+       	         }
+    	        },
+    	        series: [{
+    	      	  data: [60, 40, 20]
+    	        }]   
+      	    });
+      	  }
+        });
+      </script>     
+   </div>    
+
+   <div id="page-5" data-element="page" data-order="5"> 
+      <h1>Investissement</h1>
+      <h2>Financement</h2>
+      <div id="text"> 
+         <p>Pour financer l'achat de fours, votre entreprise utilisera en priorité les liquidités dont elle dispose. Ce montant apparaît au bilan à l'item «Encaisse». S'il manque des fonds pour compléter le financement, la simulation fera automatiquement une demande de prêt à long terme auprès de votre banque.</p>
+         <p>Votre institution financière analysera le bilan de votre entreprise et sa capacité d'emprunt. Elle peut accepter ou refuser un prêt. En cas de refus, vous pouvez réduire le montant de l'emprunt en achetant moins de fours et par la suite soumettre une nouvelle demande. Vous pouvez également changer d'institution financière. </p>
+      </div>
+      <div id="content"> 
+        <center><img class="no-border" src="/kayak/images/tutorials/investment/page5.png"/></center>
+      </div>
+   </div>
+   
+   <div id="page-6" data-element="page" data-order="6">
+      <h1>Investissement</h1>
+      <h2>Dépenses d'opération</h2>
+      <div id="text">
+         <p>Même si vous obtenez le financement de votre projet d'investissement, cela ne signifie pas nécessairement qu'il sera rentable. Chaque four entraîne des dépenses d'opération dont certaines sont fixes (entretien, amortissement) et d'autres variables (main-d'œuvre).</p>
+         <p>Pour faire le suivi des coûts de production, utilisez le rapport intitulé «Coûts de fabrication». Il est normal que l'achat d'un nouveau four entraîne une augmentation des coûts totaux. Mais en aucun cas un investissement devrait accroître le coût moyen de fabrication d'un kayak. Dans l'industrie manufacturière, le contrôle des coûts est la clé du succès.</p>
+     </div>   
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/investment/page6_fr.png"/></center>             
+      </div>   
+   </div>  
+
+   <div id="page-7" data-element="page" data-order="7">
+      <h1>Investissement</h1>
+      <h2>Questions et réponses</h2>
+      <div id="text"> 
+         <p>Révisons maintenant quelques concepts clés du tutoriel.</br></br>Pour chaque question à choix multiple, cliquez sur la réponse qui vous semble la meilleure. Si ce choix s’avère erroné, poursuivez jusqu'à ce que vous obteniez la bonne réponse.</p>
+      </div>
+      <div id="content" data-class-override="q-and-a-override">
+        <center> 
+           <div class="bg-blanc-10-no-gradient q-and-a-div">
+           <h4>Bonne réponse obtenue au...</h4>
+            <p class="q-and-a">
+              1<sup>er</sup> essai &nbsp:&nbsp 5 points<br/>
+              2<sup>e&nbsp</sup> essai &nbsp:&nbsp 4 points<br/>
+              3<sup>e&nbsp</sup> essai &nbsp:&nbsp 3 points<br/>
+              4<sup>e&nbsp</sup> essai &nbsp:&nbsp 2 points<br/>
+              5<sup>e&nbsp</sup> essai &nbsp:&nbsp 1 point&nbsp&nbsp<br/>
+            </p>
+           </div>
+        </center>
+      </div>   </div>
+  
+   <div id="page-8" data-element="question" data-order="8">
+      <div id="question-number">1</div>
+      <div id="question"> 
+         Pourquoi une entreprise devrait-elle acheter un ou plusieurs fours?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Pour réagir à une baisse prévue de la demande</div>
+         <div class="choice" data-value="2">Pour réagir à une hausse prévue de la demande</div>
+         <div class="choice" data-value="3">Pour créer de l'emploi dans l'usine</div>
+         <div class="choice" data-value="4">Pour augmenter le coût de production moyen d'un kayak</div>
+         <div class="choice" data-value="5">Pour augmenter la superficie de l'entrepôt</div>               
+      </div>
+	 <div id="goodAnswer"> 
+         Les entreprises manufacturières ajustent leur capacité de production à la demande. Elles s'assurent d'avoir les équipements nécessaires pour répondre aux commandes de la clientèle.
+	 </div>
+   </div>
+   
+	 <div id="page-9" data-element="question" data-order="9">
+      <div id="question-number">2</div>
+      <div id="question"> 
+         Quel événement devrait normalement entraîner l'achat d'un ou de plusieurs fours?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Un changement de directeur de la production</div>
+         <div class="choice" data-value="2">Une hausse des profits</div>
+         <div class="choice" data-value="3">Une récession économique</div>
+         <div class="choice" data-value="4">Une expansion vers un nouveau marché d'exportation</div>
+         <div class="choice" data-value="5">Une hausse du prix du polyéthylène</div>               
+      </div>
+	 <div id="goodAnswer"> 
+	     Avant de se lancer dans un nouveau marché d'exportation, il faut s'assurer que l'usine puisse répondre à la demande. 
+	 </div>
+   </div>  
+   
+   <div id="page-10" data-element="question" data-order="10">
+      <div id="question-number">3</div>      
+      <div id="question"> 
+         Quel nombre maximal de fours la simulation vous permet-elle d'acheter au cours d'une même année?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">1</div>
+         <div class="choice" data-value="2">2</div>
+         <div class="choice" data-value="3">3</div>
+         <div class="choice" data-value="4">4</div>
+         <div class="choice" data-value="5">5</div>               
+      </div>
+	 <div id="goodAnswer"> 
+	     La simulation vous permet d'acheter un nombre maximal de trois fours au cours d'une même année.
+	 </div>
+   </div>
+
+   <div id="page-11" data-element="question" data-order="11">
+      <div id="question-number">4</div>      
+      <div id="question"> 
+         Dans quel rapport financier le montant payé pour l'achat d'un four est-il comptabilisé?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">L'état des résultats</div>
+         <div class="choice" data-value="2">Le bilan</div>
+         <div class="choice" data-value="3">Les coûts de fabrication</div>
+         <div class="choice" data-value="4">La rentabilité par produit</div>
+         <div class="choice" data-value="5">L'état des flux de trésorerie</div>               
+      </div>
+	 <div id="goodAnswer"> 
+	     Le montant payé pour l'achat d'un four est un actif qui apparaît au «bilan» de l'entreprise.
+	 </div>
+   </div>
+   
+   <div id="page-12" data-element="question" data-order="12">
+      <div id="question-number">5</div>      
+      <div id="question"> 
+         Nommez une option que vous propose la simulation pour financer l'achat de nouveaux fours.
+      </div>   
+      <div id="choices" class="largeChoices">
+	     <div class="choice" data-value="1">Demander une contribution aux employés</div>
+         <div class="choice" data-value="2">Demander une subvention au gouvernement</div>
+         <div class="choice" data-value="3">Demander un crédit auprès du fournisseur</div>
+         <div class="choice" data-value="4">Demander un prêt à court terme à une banque</div>
+         <div class="choice" data-value="5">Demander un prêt à long terme à une banque</div>               
+      </div>
+     <div id="goodAnswer"> 
+	     Les investissements dans des équipements coûteux sont généralement financés au moyen d'un emprunt à long terme. Cette option existe dans la simulation. 
+	 </div>
+    </div>
+      
+   </body>
+</html>

@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+   <div data-exercise-id="3D5E9CF3-6374-4FB7-9AC9-E9688102A8E0"></div>
+   
+   <div class="exercise-reference">
+      <h1>Chapitre 9</h1>
+      <h2>L'embauche des ressources humaines</h2>
+      <h3>pp. 286-293.</h3>
+      <img src="/kayak/images/tutorials/book.jpg"/>             
+   </div>  
+   <div class="exercise-reference-teluq">
+      <h1>Chapitre 6</h1>
+      <h2>La gestion des ressources humaines</h2>
+      <h3>pp. 216-220.</h3>
+      <img src="/kayak/images/tutorials/book-teluq.jpg"/>   
+   </div> 
+      
+   <div id="character-image"><img class="img-circle" src="/kayak/images/rh-small.png"/></div>
+
+   <div id="page-1" data-element="page" data-order="1">
+      <h1>Embauche de ressources humaines</h1>
+      <h2>Le recrutement</h2>
+      <div id="text"> 
+         <p>Le terme recrutement désigne l'ensemble des démarches administratives qui visent à trouver un candidat compétent lorsqu'un poste est ouvert dans une entreprise.</p> 
+         <p>Dans la simulation, lorsque vous prenez la décision d'embaucher un nouvel employé, le logiciel s'assure que toutes les étapes du processus de recrutement soient exécutées sans que vous n'ayez à intervenir. </p> 
+	  </div>
+      <div id="content"> 
+        <center><img class="no-border" src="/kayak/images/tutorials/recruiting/page1.png"/></center>
+      </div>
+   </div>
+
+      <div id="page-2" data-element="page" data-order="2">
+      <h1>Embauche de ressources humaines</h1>
+      <h2>Analyse des besoins</h2>
+      <div id="text">
+         <p>Dans notre entreprise, la plupart des besoins de personnel sont dictés par l'organisation de la production. Si vous achetez de nouveaux fours de rotomoulage, la simulation augmentera automatiquement le nombre d'opérateurs dans l'usine.  </p>
+         <p>Pour certains postes, la présence ou non de personnel relève de votre discrétion. Il en est ainsi pour le poste d'ingénieur en développement de produits, le poste de superviseur de la production et le poste de secrétaire comptable.</p>
+      </div>
+      <div id="content">
+        <center><div class="tuto-graph-container" id="graph-container"></div></center>
+      </div>   
+      <script type="text/javascript" language="Javascript">
+        $.extend($.praxar, {
+      	  page2: function() {
+      		  $('#graph-container').highcharts({
+      	        chart: {type: 'areaspline'},
+      	        title: {text: ''},
+      	        xAxis: {
+      	      	    title: { text: 'Nombre de fours' },
+      	      	    labels: { enabled: true },
+      	            categories: [
+      	                '-','','+'
+      	            ]
+      	        },
+      	        yAxis: {
+      	            title: { text: 'Nombre d\'employés' },
+     	             labels: { 
+         	           	enabled: true,
+                  	    formatter: function() {
+                            if (this.value == 20) return '-';
+                            else if (this.value == 60) return '+';
+                            else return '';
+                         } 
+         	         }
+      	        },
+      	        series: [{
+      	      	  data: [20, 40, 60]
+      	        }]
+      	    });
+      	  }
+        });
+      </script>   
+   </div>  
+   
+   <div id="page-3" data-element="page" data-order="3">
+      <h1>Embauche de ressources humaines</h1>
+      <h2>Ingénieur</h2>
+      <div id="text">
+         <p>Relevant du directeur de production, le titulaire est responsable de gérer les activités et les projets de recherche et développement. Sa contribution permet d’améliorer les techniques et les procédés de fabrication afin d'améliorer la qualité et de réduire les coûts.</p>
+         <p>Au début de la simulation, notre entreprise ne fabrique qu'un seul type de kayak. La présence d'un ingénieur en développement de produit n'est donc pas essentielle. Plus tard, si la croissance est au rendez-vous, un ingénieur améliorera la productivité de l'usine et la gestion des projets de développement.  </p> 
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/recruiting/page3.png"/></center>             
+      </div>   
+   </div>    
+
+   <div id="page-4" data-element="page" data-order="4"> 
+      <h1>Embauche de ressources humaines</h1>
+      <h2>Superviseur</h2>
+      <div id="text"> 
+         <p>Relevant du directeur de production, le titulaire est responsable de la fabrication des produits et de la gestion des employés de l'usine. Il s'assure du respect des normes de sécurité ainsi que de l'amélioration des méthodes de travail.</p>
+         <p>Au démarrage de la simulation, notre entreprise ne compte qu'un seul superviseur. La croissance des ventes devrait cependant entraîner l'embauche d'un ou de plusieurs superviseurs additionnels afin de maintenir un contrôle étroit sur les opérations. Cette décision est donc étroitement liée à l'accroissement de la capacité de l'usine. </p>
+      </div>
+      <div id="content">
+        <center><div class="tuto-graph-container" id="graph-container"></div></center>
+      </div>   
+      <script type="text/javascript" language="Javascript">
+        $.extend($.praxar, {
+      	  page4: function() {
+      		  $('#graph-container').highcharts({
+      	        chart: {type: 'areaspline'},
+      	        title: {text: ''},
+      	        xAxis: {
+      	      	    title: { text: 'Ventes' },
+      	      	    labels: { enabled: true },
+      	            categories: [
+      	                '-','','+'
+      	            ]
+      	        },
+      	        yAxis: {
+      	            title: { text: 'Nombre de superviseurs' },
+     	             labels: { 
+         	           	enabled: true,
+                  	    formatter: function() {
+                            if (this.value == 20) return '-';
+                            else if (this.value == 60) return '+';
+                            else return '';
+                         } 
+         	         }
+      	        },
+      	        series: [{
+      	      	  data: [20, 40, 60]
+      	        }]
+      	    });
+      	  }
+        });
+      </script> 
+   </div>
+   
+   <div id="page-5" data-element="page" data-order="5">
+      <h1>Embauche de ressources humaines</h1>
+      <h2>Secrétaire comptable</h2>
+      <div id="text">
+         <p>Relevant du directeur général, le (la) secrétaire comptable assure à la fois des missions diversifiées de secrétariat  et des missions de comptabilité portant sur la réalisation et le suivi des travaux comptables.</p>
+         <p>Au démarrage de la simulation, les ventes de notre entreprise sont faibles. Un seul secrétaire comptable suffit amplement pour exécuter l'ensemble des tâches administratives. Toutefois, il faudra procéder à l'embauche de personnel additionnel pour accompagner la croissance. </p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/recruiting/page5.png"/></center>             
+      </div>   
+   </div>  
+
+   <div id="page-6" data-element="page" data-order="6">
+      <h1>Embauche de ressources humaines</h1>
+      <h2>Les coûts fixes</h2>
+      <div id="text">
+         <p>Dans une entreprise manufacturière, les dépenses de main-d'oeuvre sont en général liées au nombre d'unités produites. Ce n'est cependant pas le cas des trois postes pour lesquels vous devez prendre des décisions. Ces derniers ne travaillent pas directement sur les machines.</p>
+         <p>Si vous maintenez au minimum l'embauche de ce type de personnel, les dépenses en seront évidemment réduites. Sachez cependant que vous risquez de perdre le contrôle des opérations.  </p>
+      </div>
+      <div id="content">
+        <center><div class="tuto-graph-container" id="graph-container"></div></center>
+      </div>   
+      <script type="text/javascript" language="Javascript">
+        $.extend($.praxar, {
+      	  page6: function() {
+      		  $('#graph-container').highcharts({
+      	        chart: {type: 'areaspline'},
+      	        title: {text: ''},
+      	        xAxis: {
+      	      	    title: { text: 'Dépenses de main-d\'oeuvre' },
+      	      	    labels: { enabled: true },
+      	            categories: [
+      	                '-','','+'
+      	            ]
+      	        },
+      	        yAxis: {
+      	            title: { text: 'Nombre d\'unités produites' },
+     	             labels: { 
+         	           	enabled: true,
+                  	    formatter: function() {
+                            if (this.value == 20) return '-';
+                            else if (this.value == 60) return '+';
+                            else return '';
+                         } 
+         	         }
+      	        },
+      	        series: [{
+      	      	  data: [20, 40, 60]
+      	        }]
+      	    });
+      	  }
+        });
+      </script> 
+   </div>  
+
+   <div id="page-7" data-element="page" data-order="7">
+      <h1>Embauche de ressources humaines</h1>
+      <h2>Le congédiement</h2>
+      <div id="text">
+         <p>Que se passe-t-il si vous augmentez trop rapidement le nombre d'ingénieurs, de superviseurs et de secrétaires comptables? Vous aurez peut-être la désagréable responsabilité de congédier du personnel. </p>
+         <p>À chaque période de simulation, il est possible de congédier un employé que vous avez préalablement embauché. Vous devrez cependant verser une prime de départ à cette personne. Cette prime peut atteindre un montant équivalent à quelques mois de salaires.</p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/recruiting/page7.png"/></center>             
+      </div>   
+   </div>  
+   
+   <div id="page-8" data-element="page" data-order="8">
+      <h1>Embauche de ressources humaines</h1>
+      <h2>Questions et réponses</h2>
+      <div id="text"> 
+         <p>Révisons maintenant quelques concepts clés du tutoriel.</br></br>Pour chaque question à choix multiple, cliquez sur la réponse qui vous semble la meilleure. Si ce choix s’avère erroné, poursuivez jusqu'à ce que vous obteniez la bonne réponse.</p>
+      </div>
+      <div id="content" data-class-override="q-and-a-override">
+        <center> 
+           <div class="bg-blanc-10-no-gradient q-and-a-div">
+           <h4>Bonne réponse obtenue au...</h4>
+            <p class="q-and-a">
+              1<sup>er</sup> essai &nbsp:&nbsp 5 points<br/>
+              2<sup>e&nbsp</sup> essai &nbsp:&nbsp 4 points<br/>
+              3<sup>e&nbsp</sup> essai &nbsp:&nbsp 3 points<br/>
+              4<sup>e&nbsp</sup> essai &nbsp:&nbsp 2 points<br/>
+              5<sup>e&nbsp</sup> essai &nbsp:&nbsp 1 point&nbsp&nbsp<br/>
+            </p>
+           </div>
+        </center>
+      </div>   </div>
+  
+   <div id="page-9" data-element="question" data-order="9">
+      <div id="question-number">1</div>
+      <div id="question"> 
+         Dans la simulation, vous pouvez embaucher du personnel additionnel pour quel poste?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Directeur général de l'entreprise</div>
+         <div class="choice" data-value="2">Opérateur de four de rotomoulage</div>
+         <div class="choice" data-value="3">Représentant des ventes</div>
+         <div class="choice" data-value="4">Membre du conseil d'administration</div>
+         <div class="choice" data-value="5">Secrétaire comptable</div>               
+      </div>
+	 <div id="goodAnswer"> 
+	     Lorsque le travail administratif augmente suite à la croissance des ventes, vous pouvez embaucher un ou plusieurs secrétaires comptables.
+	 </div>
+   </div>  
+   
+   <div id="page-10" data-element="question" data-order="10">
+      <div id="question-number">2</div>
+      <div id="question"> 
+         Dans la simulation, quel motif raisonnable pourrait vous amener à embaucher un ingénieur?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Votre entreprise dispose d'importantes liquidités</div>
+         <div class="choice" data-value="2">Votre entreprise n'est pas rentable</div>
+         <div class="choice" data-value="3">Votre entreprise souhaite lancer de nouveaux produits</div>
+         <div class="choice" data-value="4">Votre entreprise souhaite acheter un nouveau logiciel comptable</div>
+         <div class="choice" data-value="5">Votre entreprise doit se conformer à la réglementation</div>               
+      </div>
+	 <div id="goodAnswer"> 
+         Un ingénieur s'avère essentiel si votre entreprise souhaite lancer de nouveaux produits car cela requiert des connaissances techniques avancées.
+	 </div>
+   </div>  
+
+   <div id="page-11" data-element="question" data-order="11">
+      <div id="question-number">3</div>      
+      <div id="question"> 
+         Dans la simulation, quel motif raisonnable pourrait vous amener à embaucher un nouveau superviseur d'usine?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Votre entreprise a doublé ses profits</div>
+         <div class="choice" data-value="2">Votre entreprise a acheté de nouveaux fours de rotomoulage</div>
+         <div class="choice" data-value="3">Votre entreprise vient d'embaucher un nouvel ingénieur</div>
+         <div class="choice" data-value="4">Votre entreprise souhaite améliorer la collecte des comptes à recevoir</div>
+         <div class="choice" data-value="5">Votre entreprise souhaite réduire les conflits interpersonnels</div>               
+      </div>
+	 <div id="goodAnswer"> 
+	     Le nombre de superviseurs est étroitement lié au nombre de fours dont il faut surveiller les opérations.
+	 </div>
+   </div> 
+
+   <div id="page-12" data-element="question" data-order="12">
+      <div id="question-number">4</div>      
+      <div id="question"> 
+         Dans la simulation, quel motif raisonnable pourrait vous amener à embaucher un nouveau secrétaire comptable?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Le budget prévoit une baisse des profits de 35%</div>
+         <div class="choice" data-value="2">Le budget prévoit une hausse des profits de 35%</div>
+         <div class="choice" data-value="3">Le budget prévoit une baisse des ventes de 35%</div>
+         <div class="choice" data-value="4">Le budget prévoit une hausse des ventes de 35%</div>
+         <div class="choice" data-value="5">Le budget prévoit une hausse du dollar canadien de 10%</div>               
+      </div>
+	 <div id="goodAnswer"> 
+	     Le travail administratif et comptable d'une entreprise est étroitement lié au volume des ventes. Lorsque les ventes augmentent, il y a un plus grand nombre de factures à émettre, de commandes de matériel à traiter, de chèques à déposer, etc.
+	 </div>
+   </div>
+   
+   <div id="page-13" data-element="question" data-order="13">
+      <div id="question-number">5</div>      
+      <div id="question"> 
+        Dans la simulation, qu'est-ce qui pourrait vous amener à congédier un employé?
+      </div>   
+      <div id="choices" class="largeChoices">
+	     <div class="choice" data-value="1">Vous souhaitez augmenter les revenus</div>
+         <div class="choice" data-value="2">Vous souhaitez réduire la quantité de travail à effectuer</div>
+         <div class="choice" data-value="3">Vous souhaitez ajuster le nombre d'employés par rapport aux besoins de l'entreprise</div>
+         <div class="choice" data-value="4">Vous souhaitez affirmer votre autorité à titre de directeur général</div>
+         <div class="choice" data-value="5">Vous souhaitez vous débarrasser d'un employé incompétent</div>                  
+      </div>
+	 <div id="goodAnswer"> 
+	     Si vous avez embauché plus d'employés que n'en requièrent les tâches à réaliser, vous avez la possibilité de réduire leur nombre par un congédiement.
+	 </div>
+   </div> 
+      
+   </body>
+</html>

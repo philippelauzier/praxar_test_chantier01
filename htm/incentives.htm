@@ -1,0 +1,309 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+   <div data-exercise-id="59442CAA-0C1B-4C39-AAC6-90F4D2845395"></div>
+   
+   <div class="exercise-reference">
+      <h1>Chapitre 9</h1>
+      <h2>La rémunération et le rendement</h2>
+      <h3>pp. 295-296.</h3>
+      <img src="/kayak/images/tutorials/book.jpg"/>             
+   </div>  
+   <div class="exercise-reference-teluq">
+      <h1>Chapitre 6</h1>
+      <h2>La gestion des ressources humaines</h2>
+      <h3>pp. 227-230.</h3>
+      <img src="/kayak/images/tutorials/book-teluq.jpg"/>   
+   </div> 
+
+   <div id="character-image"><img class="img-circle" src="/kayak/images/rh-small.png"/></div>
+
+   <div id="page-1" data-element="page" data-order="1">
+      <h1>Rémunération incitative</h1>
+      <h2>Définition</h2>
+      <div id="text"> 
+         <p>Outre le salaire de base, plusieurs entreprises mettent en place des programmes de rémunération incitative afin d'accroître la performance économique et sociale de leur organisation.</p> 
+         <p>La simulation propose deux formes de rémunération incitative : verser une commission sur les ventes aux représentants et offrir aux cadres de l'entreprise une participation aux bénéfices. </p> 
+	  </div>
+       <div id="content"> 
+           <center><img class="no-border" src="/kayak/images/tutorials/incentives/page1.png"/></center>
+      </div>
+   </div>
+
+      <div id="page-2" data-element="page" data-order="2">
+      <h1>Rémunération incitative</h1>
+      <h2>Commission sur les ventes</h2>
+      <div id="text">
+         <p>Les représentants de commerce sont souvent des personnes individualistes qui ont confiance en leurs moyens. Une commission les incitera à se surpasser pour augmenter leur salaire. De plus, la commission est perçue comme une marque de reconnaissance pour les efforts déployés.</p>
+         <p>Les commissions sont versées individuellement à chaque représentant. Dans la simulation, vous déterminez le pourcentage de la commission. Ce dernier s'applique directement sur les ventes réalisées au cours d'une année. </p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/incentives/page2.png"/></center>             
+      </div>   
+   </div>  
+   
+   <div id="page-3" data-element="page" data-order="3">
+      <h1>Rémunération incitative</h1>
+      <h2>Avantages et inconvénients</h2>
+      <div id="text">
+         <p>Les commissions ont un effet positif sur les ventes d'une entreprise. Elles permettent d'identifier rapidement les bons représentants et procurent une forte motivation à court terme. L'impact de changements dans la commission est immédiat.</p>
+         <p>Toutefois, les commissions n'ont pas que des avantages. Elles coûtent cher à l'entreprise et ne contribuent pas au développement d'une relation à long terme avec la clientèle.</p> 
+      </div>
+      <div id="content">
+        <center><div class="tuto-graph-container" id="graph-container"></div></center>
+      </div>   
+      <script type="text/javascript" language="Javascript">
+        $.extend($.praxar, {
+      	  page3: function() {
+      		  $('#graph-container').highcharts({
+      	        chart: {type: 'areaspline'},
+      	        title: {text: ''},
+      	        xAxis: {
+      	      	    title: { text: 'Commission' },
+      	      	    labels: { enabled: true },
+      	            categories: [
+      	                '-','','+'
+      	            ]
+      	        },
+      	        yAxis: {
+      	            title: { text: 'Ventes ($)' },
+     	             labels: { 
+         	           	enabled: true,
+                  	    formatter: function() {
+                            if (this.value == 20) return '-';
+                            else if (this.value == 60) return '+';
+                            else return '';
+                         } 
+         	         }
+      	        },
+      	        series: [{
+      	      	  data: [20, 40, 60]
+      	        }]
+      	    });
+      	  }
+        });
+      </script>     
+   </div>    
+
+   <div id="page-4" data-element="page" data-order="4"> 
+      <h1>Rémunération incitative</h1>
+      <h2>Décision</h2>
+      <div id="text"> 
+         <p>Il est risqué de n'offrir aucune commission aux représentants. Leur salaire de base est si faible que vous ne réussirez pas à attirer des candidats valables.</p>
+         <p>Il faut cependant vous méfier des commissions trop généreuses. L'effet sur les ventes décline à partir d'un certain niveau et la mesure coûte trop cher par rapport au gain que l'entreprise peut en retirer.</p>
+      </div>
+      <div id="content">
+        <center><div class="tuto-graph-container" id="graph-container"></div></center>
+      </div>   
+      <script type="text/javascript" language="Javascript">
+        $.extend($.praxar, {
+      	  page4: function() {
+      		  $('#graph-container').highcharts({
+      			chart: {type: 'areaspline'},
+      	        title: {text: ''},
+      	        xAxis: {
+      	      	    title: { text: 'Commission' },
+      	      	    labels: { enabled: true },
+      	            categories: [
+      	                '','-','','','','','+',''
+      	            ]
+      	        },
+      	        yAxis: {
+      	            title: { text: 'Ventes ($)' },
+     	             labels: { 
+         	           	enabled: true,
+                  	    formatter: function() {
+                            if (this.value == 20) return '-';
+                            else if (this.value == 60) return '+';
+                            else return '';
+                         } 
+         	         }
+      	        },
+      	        series: [{
+      	      	  data: [20, 42, 60, 70, 75, 78, 79, 79]
+      	        }]
+      	    });
+      	  }
+        });
+      </script>  
+   </div>
+   
+   <div id="page-5" data-element="page" data-order="5">
+      <h1>Rémunération incitative</h1>
+      <h2>Participation aux bénéfices</h2>
+      <div id="text">
+         <p>Dans notre entreprise, la rémunération des dirigeants est votée par le conseil d'administration sur proposition de la direction. En plus de la rémunération de base, vous pouvez proposer une participation aux bénéfices de l'entreprise. Cette participation prend la forme d'un pourcentage des profits nets avant impôts. S'il n'y a pas de profits, aucun montant n'est versé.</p>
+         <p>Dans la simulation, le montant de la participation est versé à chaque année et partagé entre les membres de l'équipe de direction.</p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/incentives/page5.png"/></center>             
+      </div>   
+   </div>  
+
+   <div id="page-6" data-element="page" data-order="6">
+      <h1>Rémunération incitative</h1>
+      <h2>Avantages et inconvénients</h2>
+      <div id="text">
+         <p>Avec la participation aux bénéfices, les intérêts des dirigeants et ceux des actionnaires sont mieux alignés. Tous les efforts sont mis en œuvre  pour générer des profits et augmenter la valeur des actions.</p>
+         <p>La participation aux bénéfices contribue cependant à retarder les décisions d'investissement qui ont pour conséquence de diminuer le profit à court terme. Or, la stratégie d'une entreprise doit se concevoir dans une perspective à long terme.  </p>
+      </div>
+      <div id="content">
+        <center><div class="tuto-graph-container" id="graph-container"></div></center>
+      </div>   
+      <script type="text/javascript" language="Javascript">
+        $.extend($.praxar, {
+      	  page6: function() {
+      		  $('#graph-container').highcharts({
+      	        chart: {type: 'areaspline'},
+      	        title: {text: ''},
+      	        xAxis: {
+      	      	    title: { text: 'Participation aux bénéfices' },
+      	      	    labels: { enabled: true },
+      	            categories: [
+      	                '-','','+'
+      	            ]
+      	        },
+      	        yAxis: {
+      	            title: { text: 'Motivation' },
+     	             labels: { 
+         	           	enabled: true,
+                  	    formatter: function() {
+                            if (this.value == 20) return '-';
+                            else if (this.value == 60) return '+';
+                            else return '';
+                         } 
+         	         }
+      	        },
+      	        series: [{
+      	      	  data: [20, 40, 60]
+      	        }]
+      	    });
+      	  }
+        });
+      </script>    
+   </div>  
+
+   <div id="page-7" data-element="page" data-order="7">
+      <h1>Rémunération incitative</h1>
+      <h2>Décision</h2>
+      <div id="text">
+         <p>Il peut s'avérer risqué de n'offrir aucune rémunération incitative à l'équipe de direction. Une participation aux bénéfices constitue un excellent moyen d'intéresser les cadres au succès de l'entreprise. </p>
+         <p>Songez toutefois que cette forme de rémunération coûte cher. En outre, il est difficile de mesurer précisément l'impact d'une telle mesure.</p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/incentives/page7.png"/></center>             
+      </div>   
+   </div>  
+   
+   <div id="page-8" data-element="page" data-order="8">
+      <h1>Rémunération incitative</h1>
+      <h2>Questions et réponses</h2>
+      <div id="text"> 
+         <p>Révisons maintenant quelques concepts clés du tutoriel.</br></br>Pour chaque question à choix multiple, cliquez sur la réponse qui vous semble la meilleure. Si ce choix s’avère erroné, poursuivez jusqu'à ce que vous obteniez la bonne réponse.</p>
+      </div>
+      <div id="content" data-class-override="q-and-a-override">
+        <center> 
+           <div class="bg-blanc-10-no-gradient q-and-a-div">
+           <h4>Bonne réponse obtenue au...</h4>
+            <p class="q-and-a">
+              1<sup>er</sup> essai &nbsp:&nbsp 5 points<br/>
+              2<sup>e&nbsp</sup> essai &nbsp:&nbsp 4 points<br/>
+              3<sup>e&nbsp</sup> essai &nbsp:&nbsp 3 points<br/>
+              4<sup>e&nbsp</sup> essai &nbsp:&nbsp 2 points<br/>
+              5<sup>e&nbsp</sup> essai &nbsp:&nbsp 1 point&nbsp&nbsp<br/>
+            </p>
+           </div>
+        </center>
+      </div>
+   </div>
+  
+   <div id="page-9" data-element="question" data-order="9">
+      <div id="question-number">1</div>
+      <div id="question"> 
+         À quelle catégorie d'employés s'adresse généralement la commission sur les ventes?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Le directeur général de l'entreprise</div>
+         <div class="choice" data-value="2">Les directeurs des services</div>
+         <div class="choice" data-value="3">Les ouvriers de l'usine</div>
+         <div class="choice" data-value="4">Les représentants de commerce</div>
+         <div class="choice" data-value="5">Le secrétaire comptable de l'entreprise</div>               
+      </div>
+	 <div id="goodAnswer"> 
+	     Les représentants de commerce car ce sont eux qui sont en contact direct avec les clients et peuvent influencer le nombre de kayaks vendus.
+	 </div>
+   </div>  
+   
+   <div id="page-10" data-element="question" data-order="10">
+      <div id="question-number">2</div>
+      <div id="question"> 
+         Les commissions sur les ventes n'ont pas que des avantages. Sélectionnez un inconvénient dans la liste suivante.
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Cela permet d'augmenter les ventes</div>
+         <div class="choice" data-value="2">Cela permet de motiver les représentants de commerce</div>
+         <div class="choice" data-value="3">Cela coûte cher à l'entreprise</div>
+         <div class="choice" data-value="4">Cela ne convient que pour les produits d'entrée de gamme</div>
+         <div class="choice" data-value="5">Cela est contraire à la loi sur le salaire minimum</div>               
+      </div>
+	 <div id="goodAnswer"> 
+         Offrir une commission sur les ventes est généralement perçu comme une bonne façon de motiver les représentants. Toutefois, c'est une mesure qui coûte cher lorsqu'elle s'applique sur le total des ventes réalisées par le représentant.
+	 </div>
+   </div>
+
+   <div id="page-11" data-element="question" data-order="11">
+      <div id="question-number">3</div>      
+      <div id="question"> 
+         Lequel des énoncés suivants est vrai dans la simulation?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Les représentants sont les personnes les mieux payées de leur entreprise</div>
+         <div class="choice" data-value="2">Les représentants ne reçoivent jamais de rémunération de base</div>
+         <div class="choice" data-value="3">Les représentants ne reçoivent jamais de rémunération incitative</div>
+         <div class="choice" data-value="4">La rémunération incitative des représentants est liée aux ventes</div>
+         <div class="choice" data-value="5">La rémunération incitative des représentants est liée aux profits</div>               
+      </div>
+	 <div id="goodAnswer"> 
+	     Il est fortement recommandé d'offrir aux représentants une rémunération incitative constituée d'un pourcentage des ventes qu'ils réalisent.
+	 </div>
+   </div> 
+
+   <div id="page-12" data-element="question" data-order="12">
+      <div id="question-number">4</div>      
+      <div id="question"> 
+        Quel est l'objectif poursuivi en offrant au personnel cadre une participation aux bénéfices de l'entreprise?
+      </div>   
+      <div id="choices" class="largeChoices">
+	     <div class="choice" data-value="1">Faire en sorte que leur intérêt personnel soit aligné sur celui des actionnaires</div>
+         <div class="choice" data-value="2">Augmenter la masse salariale de l'entreprise</div>
+         <div class="choice" data-value="3">Réduire la pauvreté dans la communauté et contribuer ainsi au mieux-être collectif</div>
+         <div class="choice" data-value="4">Réduire les impôts à payer sur les profits de l'entreprise</div>
+         <div class="choice" data-value="5">Améliorer les relations entre les cadres et les autres employés</div>                  
+      </div>
+	 <div id="goodAnswer"> 
+	     Si les cadres obtiennent un pourcentage des bénéfices de l'entreprise, ils travailleront plus fort pour générer des profits.
+	 </div>
+   </div>      
+
+   <div id="page-13" data-element="question" data-order="13">
+      <div id="question-number">5</div>      
+      <div id="question"> 
+         Quel danger pourrait menacer une entreprise qui offre un pourcentage de participation aux profits trop élevé à ses dirigeants?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Les ventes pourraient croître trop rapidement</div>
+         <div class="choice" data-value="2">Cela inciterait les dirigeants à frauder pour augmenter leur rémunération</div>
+         <div class="choice" data-value="3">Cela pourrait engendrer un conflit entre les dirigeants et les employés</div>
+         <div class="choice" data-value="4">Cela pourrait engendrer un conflit entre les dirigeants et les membres du conseil d'administration</div>
+         <div class="choice" data-value="5">Cela pourrait retarder les décisions d'investissement</div>               
+      </div>
+	 <div id="goodAnswer"> 
+	     Comme les projets d'investissement ont pour effet de réduire la rentabilité à court terme, cela pourrait inciter les dirigeants à les retarder pour ne pas affecter leur rémunération.
+	 </div>
+   </div>
+   
+   </body>
+</html>

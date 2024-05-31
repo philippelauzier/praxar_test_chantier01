@@ -1,0 +1,380 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+<body>
+   <div data-exercise-id="318BC5D9-2022-444C-8EB0-5F8C6E0D21EF"></div>
+   
+   <div class="exercise-reference">
+      <h1>Chapitre 6</h1>
+      <h2>La distribution</h2>
+      <h3>pp. 201-204.</h3>
+      <img src="/kayak/images/tutorials/book.jpg"/>             
+   </div>  
+   <div class="exercise-reference-teluq">
+      <h1>Chapitre 8</h1>
+      <h2>La gestion dans un environnement mondial</h2>
+      <h3>pp. 292-298.</h3>
+      <img src="/kayak/images/tutorials/book-teluq.jpg"/>   
+   </div> 
+
+   <div id="character-image"><img class="img-circle" src="/kayak/images/marketing-small.png"/></div>
+   <div id="page-1" data-element="page" data-order="1">
+      <h1>Distribution</h1>
+      <h2>Le réseau de distribution</h2>
+      <div id="text"> 
+         <p>Le rôle de la distribution est d'amener les produits aux consommateurs afin qu'ils puissent acheter un kayak à l'endroit où ils le désirent et au moment où ils le désirent.</p> 
+         <p>Dans la simulation, le réseau de distribution est relativement court : il va du manufacturier au détaillant et au client.</p>
+      </div>
+      <div id="content"> 
+         <center><img class="no-border" src="/kayak/images/tutorials/distribution/page1_fr.png"/></center>
+      </div>
+   </div>
+
+   <div id="page-2" data-element="page" data-order="2"> 
+      <h1>Distribution</h1>
+      <h2>La vente au détail de kayaks</h2>
+      <div id="text"> 
+         <p>Les manufacturiers de kayaks possèdent plusieurs options pour écouler leur production. Ils peuvent vendre à des boutiques spécialisées, à des magasins de sport ou encore à de grands magasins.</p>
+         <p>Les manufacturiers s'efforcent de maintenir des politiques équitables envers toutes les catégories de détaillants et de ne pas favoriser un groupe au détriment des autres. </p>
+      </div>
+      <div id="content"> 
+         <center><img class="no-border" src="/kayak/images/tutorials/distribution/page2.png"/></center>
+      </div>
+   </div>
+   
+   <div id="page-3" data-element="page" data-order="3">
+      <h1>Distribution</h1>
+      <h2>Les coûts de transport</h2>
+      <div id="text">
+         <p>Dans la simulation, les coûts pour acheminer les kayaks aux détaillants sont assumés par les fabricants.</p>
+         <p>Plus un territoire est éloigné de l'usine, plus le coût moyen pour expédier un kayak sera élevé.</p>
+      </div>
+      <div id="content">
+        <center><div class="tuto-graph-container" id="graph-container"></div></center>
+      </div>   
+      <script type="text/javascript" language="Javascript">
+        $.extend($.praxar, {
+           page3: function() {
+         	  $('#graph-container').highcharts({
+                 chart: {
+                     type: 'column'
+                 },
+                 title: {
+                     text: ''
+                 },
+                 xAxis: {
+                     type: 'category',
+                     title: { 
+                     	text: 'Marchés',
+                     	offset: 110
+                     },                     
+                     labels: {
+                         rotation: -45,
+                         style: {
+                       		fontSize: '16px'
+                          }
+                     }
+                 },
+                 yAxis: {
+                     min: 0,
+                     title: {
+                         text: 'Coût du transport'
+                     },
+     	             labels: { 
+         	           	enabled: true,
+                  	    formatter: function() {
+                            if (this.value == 10) return '-';
+                            else if (this.value == 30) return '+';
+                            else return '';
+                         } 
+         	         }
+                 },
+                 series: [{
+                     name: '',
+                     data: [
+                         ['Canada', 10],
+                         ['Est des<br/> États-Unis', 21],
+                         ['Ouest des<br/> États-Unis', 23],
+                         {name: 'Mexique', y: 32}
+                     ]
+                 }]
+             });
+           }
+        });
+      </script>  
+   </div>  
+
+   <div id="page-4" data-element="page" data-order="4">
+      <h1>Distribution</h1>
+      <h2>La remise</h2>
+      <div id="text">
+         <p>Les fabricants de kayaks offrent aux détaillants une remise par rapport au prix de vente au détail. Cette remise constitue le revenu des détaillants.</p>
+         <p>La remise est exprimée en pourcentage du prix de vente, généralement entre 25 et 30%. Le graphique ci-contre présente le partage type des revenus entre le manufacturier et le détaillant.</p>
+      </div>
+      <div id="content">
+         <center><div class="tuto-graph-container" id="graph-container"></div></center>
+      </div>
+      <script type="text/javascript" language="Javascript">
+        $.extend($.praxar, {
+           page4: function() {
+              $('#graph-container').highcharts({
+                 chart: {
+                    plotShadow: true
+                },
+                title: {
+                    text: ''
+                },
+                plotOptions: {
+                    pie: {
+                        dataLabels: {
+                           format: '<span style="font-weight: 400;">{point.name}</span>',
+                            style: {
+                                fontSize: '14px',
+                                fontWeight: '400',
+                            }
+                        }
+                    }
+                },
+                series: [{
+                    type: 'pie',
+                    name: 'Browser share',
+                    data: [
+                        {name: 'Fabricant (70%-75%)', y: 70.0, color: 'rgba(49,57,70,0.7)', sliced: true},
+                        {name: 'Détaillant (25%-30%)', y: 30.0, color: 'rgba(49,57,70,0.7)', sliced: true}
+                        
+                    ]
+                }]
+             });
+           }
+        });
+      </script>    
+   </div>  
+
+   <div id="page-5" data-element="page" data-order="5">
+      <h1>Distribution</h1>
+      <h2>Motivation des détaillants</h2>
+      <div id="text">
+         <p>La remise constitue un excellent moyen de motiver les détaillants. Un taux plus élevé incitera les détaillants à mettre vos produits en valeur dans les magasins et entraînera une augmentation des ventes.</p>
+         <p>Toutefois, cette mesure coûte cher puisqu'elle réduit le revenu que vous tirez de la vente de chaque kayak. Vous devez trouver le niveau qui offre la meilleure possibilité de profit total. </p>
+      </div>
+      <div id="content">
+         <center><div class="tuto-graph-container" id="graph-container"></div></center>
+      </div>
+      <script type="text/javascript" language="Javascript">
+        $.extend($.praxar, {
+           page5: function() {
+              $('#graph-container').highcharts({
+            	chart: {type: 'spline'},
+      	        title: {text: ''},
+      	        xAxis: {
+      	      	    title: { text: '' },
+      	            categories: ['','','','','']
+      	        },
+      	        yAxis: {
+      	            title: { text: '' },
+      	            labels: { 
+      	               enabled: true,
+      	               formatter: function() {
+      	                  if (this.value == 20) return '-';
+      	                  else if (this.value == 60) return '+';
+      	                  else return '';
+      	               }
+                    }
+      	        },
+                legend: {
+                   enabled: true,
+                   style: {
+                      fontFamily: 'Roboto',
+                  	  fontWeight: '300',
+                  	  color: '#313946',
+                  	  fontSize: '18px'
+               	   }
+                },
+      	        series: [{
+                    name: 'Remise', 
+                    data: [20, 40, 53, 60, 62]
+      	        },{
+                    name: 'Revenu par kayak',
+                    data: [70, 50, 33, 26, 24]
+      	        }]
+             });
+           }
+        });
+      </script>       
+   </div>  
+
+   <div id="page-6" data-element="page" data-order="6">
+      <h1>Distribution</h1>
+      <h2>La concurrence</h2>
+      <div id="text">
+         <p>Lorsque deux manufacturiers fabriquent des produits semblables et qu'ils les vendent au même prix, le rôle du détaillant devient primordial.</p>
+         <p>Un détaillant motivé peut faire la différence et permettre à l'un des concurrents de se démarquer. La remise peut s'avérer très efficace pour stimuler les ventes.</p>
+      </div>
+      <div id="content">
+         <center><div class="tuto-graph-container" id="graph-container"></div></center>
+      </div>
+      <script type="text/javascript" language="Javascript">
+        $.extend($.praxar, {
+           page6: function() {
+              $('#graph-container').highcharts({
+            	chart: {type: 'spline'},
+      	        title: {text: ''},
+      	        xAxis: {
+      	      	    title: { text: '' },
+      	            categories: ['','','','','']
+      	        },
+      	        yAxis: {
+      	            title: { text: '' },
+      	            labels: { 
+      	               enabled: true,
+      	               formatter: function() {
+      	                  if (this.value == 20) return '-';
+      	                  else if (this.value == 60) return '+';
+      	                  else return '';
+      	               }
+                    }
+      	        },
+                legend: {
+                   enabled: true,
+                   style: {
+                      fontFamily: 'Roboto',
+                  	  fontWeight: '300',
+                  	  color: '#313946',
+                  	  fontSize: '18px'
+               	   }
+                },
+      	        series: [{
+                    name: 'Remise', 
+                    data: [20, 40, 53, 60, 62]
+      	        },{
+                    name: 'Ventes',
+                    data: [25, 45, 58, 65, 67]
+      	        }]
+             });
+           }
+        });
+      </script>      
+   </div>  
+   
+   <div id="page-7" data-element="page" data-order="7">
+      <h1>Distribution</h1>
+      <h2>Représentants</h2>
+      <div id="text">
+         <p>Les fabricants de kayaks embauchent des représentants sur chaque territoire desservi afin d'assurer la liaison avec les détaillants. Leur rôle est de former les vendeurs et de stimuler les ventes. </p>
+         <p>Dans la simulation, le nombre de représentants est calculé automatiquement en fonction du volume des ventes et du nombre de territoires desservis. Il est cependant possible d'augmenter leur rémunération afin de les motiver davantage. </p>
+      </div>
+      <div id="content">
+         <center><img class="no-border" src="/kayak/images/tutorials/distribution/page7.png"/></center>             
+      </div>   
+   </div>  
+   
+   <div id="page-8" data-element="page" data-order="8">
+      <h1>Distribution</h1>
+      <h2>Questions et réponses</h2>
+      <div id="text"> 
+         <p>Révisons maintenant quelques concepts clés du tutoriel.</br></br>Pour chaque question à choix multiple, cliquez sur la réponse qui vous semble la meilleure. Si ce choix s’avère erroné, poursuivez jusqu'à ce que vous obteniez la bonne réponse.</p>
+      </div>
+      <div id="content" data-class-override="q-and-a-override">
+        <center> 
+           <div class="bg-blanc-10-no-gradient q-and-a-div">
+           <h4>Bonne réponse obtenue au...</h4>
+            <p class="q-and-a">
+              1<sup>er</sup> essai &nbsp:&nbsp 5 points<br/>
+              2<sup>e&nbsp</sup> essai &nbsp:&nbsp 4 points<br/>
+              3<sup>e&nbsp</sup> essai &nbsp:&nbsp 3 points<br/>
+              4<sup>e&nbsp</sup> essai &nbsp:&nbsp 2 points<br/>
+              5<sup>e&nbsp</sup> essai &nbsp:&nbsp 1 point&nbsp&nbsp<br/>
+            </p>
+           </div>
+        </center>
+      </div>   </div>
+  
+   <div id="page-9" data-element="question" data-order="9">
+      <div id="question-number">1</div>
+      <div id="question"> 
+         Quel est le rôle de la distribution dans votre entreprise?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Améliorer la productivité de l'usine</div>
+         <div class="choice" data-value="2">Choisir les caractéristiques des produits</div>
+         <div class="choice" data-value="3">Sélectionner les meilleures façons d'investir le budget de publicité</div>
+         <div class="choice" data-value="4">Évaluer la performance du personnel</div>
+         <div class="choice" data-value="5">Amener les produits aux consommateurs</div>                  
+      </div>
+	 <div id="goodAnswer"> 
+	     La distribution doit s'assurer que les consommateurs puissent acheter un kayak à l'endroit où ils le désirent et au moment où ils le désirent.
+	 </div>
+   </div>  
+   
+   <div id="page-10" data-element="question" data-order="10">
+      <div id="question-number">2</div>
+      <div id="question"> 
+         Comment est structuré le réseau de distribution dans la simulation?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Manufacturier - Consommateur</div>
+         <div class="choice" data-value="2">Manufacturier - Grossiste - Consommateur</div>
+         <div class="choice" data-value="3">Manufacturier - Détaillant - Consommateur</div>
+         <div class="choice" data-value="4">Manufacturier - Grossiste - Détaillant - Consommateur</div>
+         <div class="choice" data-value="5">Détaillant - Consommateur</div>                  
+      </div>
+	 <div id="goodAnswer"> 
+	     Le manufacturier vend sa production directement au détaillant qui la revend aux consommateurs. 
+	 </div>
+   </div>
+   
+   <div id="page-11" data-element="question" data-order="11">
+      <div id="question-number">3</div>      
+      <div id="question"> 
+        Lorsqu'un consommateur achète un kayak 1 000 $ dans un magasin, quel montant approximatif obtiendra le manufacturier?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">0 $</div>
+         <div class="choice" data-value="2">250 $</div>
+         <div class="choice" data-value="3">500 $</div>
+         <div class="choice" data-value="4">750 $</div>
+         <div class="choice" data-value="5">1000 $</div>                  
+      </div>
+	 <div id="goodAnswer"> 
+	     La part du détaillant est d'environ 25 à 30%, ce qui signifie que la part du manufacturier est de 70-75%, soit environ 750 $. 
+	 </div>
+   </div>
+   
+   <div id="page-12" data-element="question" data-order="12">
+      <div id="question-number">4</div>      
+      <div id="question"> 
+        Laquelle des affirmations suivantes est vraie?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Augmenter la remise aux détaillants a un effet positif sur le nombre de kayaks vendus</div>
+         <div class="choice" data-value="2">Augmenter la remise aux détaillants a un effet négatif sur le nombre de kayaks vendus</div>
+         <div class="choice" data-value="3">Augmenter la remise aux détaillants a un effet positif sur le revenu du manufacturier par kayak</div>
+         <div class="choice" data-value="4">Réduire la remise aux détaillants a un effet positif sur le nombre de kayaks vendus</div>
+         <div class="choice" data-value="5">Réduire la remise aux détaillants a un effet négatif sur le revenu du manufacturier par kayak</div>                  
+      </div>
+	 <div id="goodAnswer"> 
+	     Lorsqu'on augmente leur remise, les détaillants sont davantage motivés et cela a un effet positif sur le nombre de kayaks vendus.
+	 </div>
+   </div>
+   
+   <div id="page-13" data-element="question" data-order="13">
+      <div id="question-number">5</div>      
+      <div id="question"> 
+        Quel est le rôle des représentants des ventes chez un fabricant de kayaks?
+      </div>   
+      <div id="choices" class="largeChoices">
+         <div class="choice" data-value="1">Ils expliquent aux consommateurs comment utiliser les kayaks</div>
+         <div class="choice" data-value="2">Ils espionnent les produits des concurrents</div>
+         <div class="choice" data-value="3">Ils supportent les efforts commerciaux des détaillants</div>
+         <div class="choice" data-value="4">Ils déterminent le prix des produits</div>
+         <div class="choice" data-value="5">Ils choisissent comment utiliser le budget de promotion</div>                  
+      </div>
+	 <div id="goodAnswer"> 
+	     Les représentants des ventes assurent la liaison avec les détaillants et ils supportent leurs efforts pour accroître les ventes.
+	 </div>
+   </div>
+      
+   </body>
+</html>
