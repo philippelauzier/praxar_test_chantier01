@@ -1,0 +1,32 @@
+{
+  "État des Resultats": {
+    "entreprise": "Les kayaks de phil",
+    "année": 2024,
+    "trimestre": "T1",
+    "chiffre affaires": 1500000,
+    "dépenses totales": 1000000,
+    "bénéfice net": 500000,
+    "marge bénéficiaire": 33.33,
+    "détails dépenses": {
+      "salaires": 300000,
+      "frais opérationnels": 400000,
+      "frais administratifs": 200000,
+      "autres dépenses": 100000
+    },
+    "produits": [
+      {
+        "nom": "Produit_A",
+        "ventes": 800000,
+        "coût production": 300000,
+        "marge bénéficiaire": 62.5
+      },
+      {
+        "nom": "Produit_B",
+        "ventes": 700000,
+        "coût production": 250000,
+        "marge bénéficiaire": 64.29
+      }
+    ]
+  }
+}
+
